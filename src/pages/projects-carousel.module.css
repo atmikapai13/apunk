@@ -1,0 +1,163 @@
+.main {
+  min-height: 100vh;
+  margin: -25px 0;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topBar {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  display: flex;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 0;
+  min-height: 0;
+}
+
+.titleLink {
+  display: inline-flex;
+  align-items: baseline;
+  text-decoration: none;
+  color: inherit;
+}
+
+.titleLink:hover .title {
+  color: var(--link);
+  /* !font-style: italic; */
+  font-style: normal;
+  
+}
+
+.titleArrow {
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: 6px;
+}
+
+.tag {
+  font-family: var(--mono);
+  color: var(--muted-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0px 0 0px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-family-headline);
+  font-size: var(--font-size-headline);
+  font-weight: var(--font-weight-headline);
+  letter-spacing: var(--letter-spacing-headline);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #474747;
+  margin: 0 0 25px;
+  line-height: 1.4;
+}
+
+.mediaWrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+}
+
+.videoEmbed {
+  width: 85%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 4px;
+}
+
+.mediaPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: #e8e8e8;
+  border-radius: 4px;
+}
+
+.carouselSection {
+  flex-shrink: 0;
+}
+
+.carouselViewport {
+  overflow: hidden;
+  width: 100%;
+  height: 160px;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  left: calc(50% - 80px);
+  top: 0;
+}
+
+.carouselItem {
+  flex-shrink: 0;
+  width: 160px;
+  height: 100px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.4s ease, box-shadow 0.3s ease;
+  transform-origin: center;
+}
+
+.carouselItemActive {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+}
+
+.thumbCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.thumbPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: #d4d4d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 1.8rem;
+  color: var(--muted-text);
+}

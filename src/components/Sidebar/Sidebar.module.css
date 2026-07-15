@@ -1,0 +1,41 @@
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  position: sticky;
+  top: 25px;
+  height: fit-content;
+}
+
+.clock {
+  font-family: Garamond, 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.navLink:hover {
+  color: var(--link);
+  font-weight: 700;
+}
+
+.navActive {
+  font-weight: 700;
+}

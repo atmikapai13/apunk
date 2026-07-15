@@ -1,0 +1,53 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --muted: #666;
+  --muted-text: #999;
+  --faint-text: #bbb;
+  --accent: #000;
+  --link: #0000EE;
+  --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, 'Fira Mono', monospace;
+  --content-width: 600px;
+  --font-size-body: 0.95rem;
+  --font-size-writing: 14px;
+  --font-family-headline: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-size-headline: 3rem;
+  --font-weight-headline: 400;
+  --letter-spacing-headline: 0.05em;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+a, button, [role="button"] {
+  cursor: none;
+}
+
+a {
+  color: var(--muted-text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link);
+  text-decoration: none;
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

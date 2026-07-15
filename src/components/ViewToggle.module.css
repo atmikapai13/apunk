@@ -1,0 +1,27 @@
+.toggle {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: #ccc;
+  background: transparent;
+  transition: color 0.15s, background 0.15s;
+}
+
+.btn:hover {
+  color: #666;
+  background: #f0f0f0;
+}
+
+.active {
+  color: #333;
+  background: #e8e8e8;
+}

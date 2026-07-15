@@ -1,0 +1,127 @@
+.content {
+  min-width: 0;
+  position: relative;
+}
+
+.topBar {
+  position: sticky;
+  top: 25px;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 20;
+}
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0 0 48px;
+  line-height: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.grid > .card:first-child {
+  padding-top: 0;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  padding: 120px 32px;
+  background: var(--bg);
+}
+
+.cardMedia {
+  position: absolute;
+  width: 600px;
+  height: auto;
+  pointer-events: none;
+  border-radius: 2px;
+  z-index: 10;
+  animation: bloom 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes bloom {
+  from {
+    transform: translate(-50%, -50%);
+    clip-path: circle(6px at 50% 50%);
+    border-radius: 50%;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    clip-path: circle(150% at 50% 50%);
+    border-radius: 2px;
+  }
+}
+
+.cardContent {
+  position: relative;
+  z-index: 11;
+}
+
+.title {
+  font-family: var(--font-family-headline);
+  font-size: var(--font-size-headline);
+  font-weight: var(--font-weight-headline);
+  letter-spacing: var(--letter-spacing-headline);
+  color: var(--text);
+  line-height: 1.1;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow {
+  flex-shrink: 0;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #000;
+  margin: 5px 0 16px;
+  max-width: 440px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--muted-text);
+}
+
+.card:hover .cardContent {
+  font-style: normal;
+}
+
+.card:hover .title .tag {
+  color: var(--link);
+}
+
+.card:hover:has(.cardMedia) .cardContent {
+  mix-blend-mode: difference;
+}
+
+.card:hover:has(.cardMedia) .title,
+.card:hover:has(.cardMedia) .description,
+.card:hover:has(.cardMedia) .tag {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

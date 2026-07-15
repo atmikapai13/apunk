@@ -1,0 +1,161 @@
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  align-items: start;
+  gap: 0 48px;
+}
+
+.center {
+  max-width: 500px;
+}
+
+.photoWrap {
+  position: relative;
+  width: 60%;
+  margin-bottom: 14px;
+}
+
+.photo {
+  width: 70%;
+  display: block;
+  border-radius: 2px;
+}
+
+.bio {
+  margin-top: 16px;
+  font-size: 4rem;
+}
+
+.bio p {
+  font-size: 0.95rem;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+
+
+.sectionLabel {
+  font-size: 0.95rem;
+  margin: 24px 0 6px;
+}
+
+.ongoingList {
+  position: relative;
+}
+
+.projectItem {
+  margin: 0;
+}
+
+.projectItem a {
+  font-size: 0.95rem;
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 1.4;
+}
+
+.projectItem a:hover {
+  color: #0000EE;
+  text-decoration: none;
+}
+
+.projectContent {
+  position: relative;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.projectContentActive {
+  mix-blend-mode: difference;
+  color: #fff;
+}
+
+.ongoingMediaWrap {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.ongoingMediaWrapTop {
+  top: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.ongoingMediaWrapBottom {
+  top: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.ongoingMedia {
+  position: absolute;
+  left: 50%;
+  width: 400px;
+  height: auto;
+  border-radius: 2px;
+  animation: ongoingBloom 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.ongoingMediaWrapTop .ongoingMedia {
+  top: 100%;
+}
+
+.ongoingMediaWrapBottom .ongoingMedia {
+  top: 0%;
+}
+
+@keyframes ongoingBloom {
+  from {
+    transform: translate(-50%, -50%);
+    clip-path: circle(6px at 50% 50%);
+    border-radius: 50%;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    clip-path: circle(150% at 50% 50%);
+    border-radius: 2px;
+  }
+}
+
+
+.influenceGroup {
+  margin-bottom: 20px;
+}
+
+.influence {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: #bbb;
+  margin: 0 0 2px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.influence a {
+  color: #bbb;
+}
+
+.influence a:hover {
+  color: #0000EE;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.contactText {
+  font-size: var(--font-size-body);
+  max-width: var(--content-width);
+  line-height: 1.25;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .right {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  translate: -50% -50%;
+  mix-blend-mode: difference;
+  transition: opacity 0.15s;
+}
+
+:global(body.media-hover) .cursor {
+  opacity: 0;
+}
