@@ -11,6 +11,8 @@ import agentMonGif from '../assets/projects/agent-mon.gif'
 import agentMonPng from '../assets/projects/agent-mon.png'
 import algoMatcherPng from '../assets/projects/algo-matcher.png'
 import juliusAIAtlasGif from '../assets/projects/juliusAIAtlas.gif'
+import textmenotGif from '../assets/projects/textmenot.gif'
+import nycracesGif from '../assets/projects/nycraces.gif'
 
 const MEDIA = {
   peripheryCenter: peripheryCenterGif,
@@ -21,6 +23,8 @@ const MEDIA = {
   nycAlgoMatcher: nycAlgoMatcherGif,
   algoMatcher: algoMatcherPng,
   juliusAIAtlas: juliusAIAtlasGif,
+  textmenot: textmenotGif,
+  nycraces: nycracesGif,
 }
 
 const PROJECTS = PROJECTS_DATA.map(p => ({

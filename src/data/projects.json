@@ -1,42 +1,11 @@
 [
   {
-    "title": "The Periphery Center",
-    "description": "A living culture lab focused on building community through the creative exploration of technology, space and ritual as our cultural medium.",
-    "tag": "CREATIVE LABS",
-    "href": "https://peripherycenter.com/",
-    "mediaKey": "peripheryCenter"
-  },
-  {
     "title": "NYC Eats",
     "description": "An agentic restaurant concierge for the iconic biannual NYC Restaurant Week built, built for Fulton Ring startup",
     "tag": "STARTUP",
     "href": "https://nyceats.live/spring2026/",
     "video": "https://www.youtube.com/embed/FC0GpE9Q4-U",
     "mediaKey": "nycEats"
-  },
-  {
-    "title": "Keeping It Urban",
-    "description": "A 150-person summit celebrating art, tech, culture that can only emerge from the density of people in NYC",
-    "tag": "EVENT",
-    "href": "https://keepingiturban.com/",
-    "mediaKey": "keepingItUrban"
-  },
-  {
-    "title": "Agent-Mon",
-    "description": "A gamified, Pokemon-inspired experience of engaging with and learning about agents for children and geriatrics",
-    "tag": "ANTHROPIC HACKATHON",
-    "href": "https://www.youtube.com/watch?v=SuLVQHYvHoA&t=3s",
-    "video": "https://www.youtube.com/embed/SuLVQHYvHoA",
-    "mediaKey": "agentMon",
-    "thumbnailKey": "agentMonPng"
-  },
-  {
-    "title": "NYC AlgoMatcher",
-    "description": "A platform for NYC residents to identify municipal algorithms trained on their personal data",
-    "tag": "CIVIC",
-    "href": "https://nyc-algo-matcher-one.vercel.app/",
-    "mediaKey": "nycAlgoMatcher",
-    "thumbnailKey": "algoMatcher"
   },
   {
     "title": "AI Builtout Atlas",
@@ -46,5 +15,53 @@
     "mediaKey": "juliusAIAtlas",
     "thumbnailKey": "juliusAIAtlas",
     "video": "https://www.youtube.com/embed/RWPcA5XY3d4"
+  },
+  {
+    "title": "The Periphery Center",
+    "description": "A living culture lab focused on building community through the creative exploration of technology, space and ritual as our cultural medium.",
+    "tag": "CREATIVE LABS",
+    "href": "https://peripherycenter.com/",
+    "mediaKey": "peripheryCenter"
+  },
+  {
+    "title": "Keeping It Urban",
+    "description": "A 150-person summit celebrating art, tech, culture that can only emerge from the density of people in NYC",
+    "tag": "CREATIVE TECH SUMMIT",
+    "href": "https://keepingiturban.com/",
+    "mediaKey": "keepingItUrban"
+  },
+  {
+    "title": "Agent-Mon",
+    "description": "A gamified, Pokemon-inspired experience of engaging with and learning about agents for children and geriatric; 2nd place winner of Anthropic x Betaworks Interfaces Hackathon",
+    "tag": "ANTHROPIC HACKATHON",
+    "href": "https://www.youtube.com/watch?v=SuLVQHYvHoA&t=3s",
+    "video": "https://www.youtube.com/embed/SuLVQHYvHoA",
+    "mediaKey": "agentMon",
+    "thumbnailKey": "agentMonPng"
+  },
+  {
+    "title": "NYC AlgoMatcher",
+    "description": "A civic tech platform for NYC residents to identify municipal algorithms trained on their personal data (received supervisory counsel from NYC OTI)",
+    "tag": "CIVIC TECH",
+    "href": "https://nyc-algo-matcher-one.vercel.app/",
+    "mediaKey": "nycAlgoMatcher",
+    "thumbnailKey": "algoMatcher"
+  },
+  {
+    "title": "NYC Races",
+    "description": "A local map of run clubs, marathons, Strava routes, and water stations, restrooms for NYC runners",
+    "tag": "GEOSPATIAL",
+    "href": "https://atmikapai.dev/nycraces/",
+    "mediaKey": "nycraces",
+    "thumbnailKey": "nycraces"
+  },
+  
+  {
+    "title": "Text Me Not",
+    "description": "A silly app that analyses your Whatsapp transcripts and shares stats on your texting habits with your friend, lover, partner",
+    "tag": "CREATIVE NONSENSE",
+    "href": "https://atmikapai.dev/textmenot/",
+    "mediaKey": "textmenot",
+    "thumbnailKey": "textmenot"
   }
 ]

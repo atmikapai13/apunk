@@ -6,6 +6,7 @@
       "date": "2026-07-13",
       "year": 2026,
       "category": "Econometrics White Papers",
+      "order": 3,
       "sections": []
     },
     {
@@ -14,6 +15,7 @@
       "date": "2026-07-13",
       "year": 2026,
       "category": "Econometrics White Papers",
+      "order": 2,
       "sections": []
     },
     {
@@ -214,7 +216,7 @@
       "sections": []
     },
     {
-      "title": "NYC Eats: New Digital Interfaces for Maps & Chatbots --- NYC Eats selected in Tech:NYC's [Obviously NYC Vibe Directory](https://obviously.nyc/vibe-directory)! --- Selected as [NYC Mappy Hour Member of the Month](https://www.linkedin.com/feed/update/urn:li:activity:7415392684359794689/)!",
+      "title": "NYC Eats: New Digital Interfaces for Maps & Chatbots --- NYC Eats selected in Tech:NYC's [Obviously NYC Vibe Directory](https://obviously.nyc/vibe-directory)! --- Selected as [Mappy Hour Member of the Month](https://www.linkedin.com/feed/update/urn:li:activity:7415392684359794689/)!",
       "slug": "2026-02-15-NYCEatsMaps",
       "date": "2026-02-15",
       "year": 2026,
@@ -229,6 +231,7 @@
       "date": "Spring 2026",
       "year": 2026,
       "category": "Econometrics White Papers",
+      "order": 1,
       "embed": "https://drive.google.com/file/d/1dCk9VlXqLSW0PUJBzkQAA1ljaWDabbw7/preview",
       "sections": []
     },
@@ -281,6 +284,15 @@
       "sections": []
     },
     {
+      "title": "My Favorite Cartographers",
+      "slug": "2025-10-14-CartographyMOOC",
+      "date": "2025-10-14",
+      "year": 2025,
+      "category": "Cartography",
+      "source": "https://medium.com/between-the-graticules/notes-on-esris-cartography-mooc-f0c4040f1d01?postPublishedType=repub",
+      "sections": []
+    },
+    {
       "title": "Notes on Build with Mapbox Summit (2025)",
       "slug": "2025-01-01-BuildWithMapboxSummit2025",
       "date": "2025-01-01",
@@ -318,7 +330,7 @@
       "sections": []
     },
     {
-      "title": "Covered by Concrete + Code, a Cornell Tech publication",
+      "title": "Covered by *Concrete + Code,* a Cornell Tech publication",
       "slug": "2026-07-15-ConcreteAndCodeKeepingItUrban",
       "date": "2026-07-15",
       "year": 2026,
