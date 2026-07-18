@@ -237,10 +237,6 @@
     margin-top: 20px;
   }
 
-  .subcategoryHeading:empty {
-    display: none;
-  }
-
   .categoryList {
     margin-top: -5px;
   }

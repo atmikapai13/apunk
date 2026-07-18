@@ -18,10 +18,10 @@ function DayDate() {
   )
 }
 
-export default function SidebarIdentity() {
+export default function SidebarIdentity({ onNavigate }) {
   return (
     <div>
-      <Link to="/" style={{ display: 'block' }}><WarpName /></Link>
+      <Link to="/" onClick={onNavigate} style={{ display: 'block' }}><WarpName /></Link>
       <DayDate />
     </div>
   )

@@ -70,10 +70,12 @@ function CategoryNode({ node, depth }) {
 
   return (
     <section className={`${depth === 0 ? styles.category : styles.subcategory} ${node.sectionClassName ? styles[node.sectionClassName] : ''}`}>
-      <p className={`${depth === 0 ? styles.categoryHeading : styles.subcategoryHeading} ${node.headingClassName ? styles[node.headingClassName] : ''}`}>
-        {node.italicPrefix && <em>{node.italicPrefix}: </em>}
-        {node.label}
-      </p>
+      {(node.label || node.italicPrefix) && (
+        <p className={`${depth === 0 ? styles.categoryHeading : styles.subcategoryHeading} ${node.headingClassName ? styles[node.headingClassName] : ''}`}>
+          {node.italicPrefix && <em>{node.italicPrefix}: </em>}
+          {node.label}
+        </p>
+      )}
       {node.children
         ? node.children.map(child => <CategoryNode key={child.label} node={child} depth={depth + 1} />)
         : (

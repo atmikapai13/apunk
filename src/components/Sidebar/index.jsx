@@ -20,7 +20,7 @@ export default function Sidebar({ active }) {
         {open ? <X size={18} strokeWidth={1.8} /> : <Plus size={18} strokeWidth={1.8} />}
       </button>
       <aside className={`${styles.left} ${open ? styles.open : ''}`}>
-        <SidebarIdentity />
+        <SidebarIdentity onNavigate={close} />
         <nav className={styles.nav}>
           <Link to="/projects-grid" onClick={close} className={`${styles.navLink} ${active === 'projects' ? styles.navActive : ''}`}>Portfolio</Link>
           <Link to="/writing" onClick={close} className={`${styles.navLink} ${active === 'writing' ? styles.navActive : ''}`}>Writing</Link>
