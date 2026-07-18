@@ -148,9 +148,9 @@
 }
 
 .contactText {
-  font-size: var(--font-size-body);
+  font-size: 0.95rem;
   max-width: var(--content-width);
-  line-height: 1.25;
+  line-height: 1.25;  
   margin: 0;
 }
 
