@@ -42,6 +42,10 @@ a, button, [role="button"] {
   a, button, [role="button"] {
     cursor: auto;
   }
+
+  :root {
+    --font-size-body: 1rem;
+  }
 }
 
 a {

@@ -155,5 +155,8 @@
   .description {
     max-width: 100%;
     overflow-wrap: break-word;
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: -5px;
   }
 }
