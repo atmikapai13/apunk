@@ -196,8 +196,8 @@
     border-radius: 2px;
   }
 
-  .styles-bio{
-    font-size: 1.05rem;
+  .bio p {
+    font-size: 1.0rem;
   }
   
 }
