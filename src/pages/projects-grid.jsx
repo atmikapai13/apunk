@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import styles from './projects-grid.module.css'
 import ViewToggle from '../components/ViewToggle'
+import MobileHeader from '../components/MobileHeader'
 import PROJECTS_DATA from '../data/projects.json'
 import nycEatsGif from '../assets/projects/nyceats.gif'
 import nycAlgoMatcherGif from '../assets/projects/nyc-algomatcher.gif'
@@ -67,6 +68,9 @@ function ProjectCard({ title, description, tag, href, media }) {
           style={{ left: pos.x, top: pos.y }}
         />
       )}
+      {media && (
+        <img src={media} alt="" aria-hidden="true" className={styles.mobileMedia} />
+      )}
       <div className={styles.cardContent}>
         <span className={styles.tag}>{tag}</span>
         <h2 className={styles.title}>
@@ -85,6 +89,7 @@ export default function Projects() {
       <div className={styles.topBar}>
         <ViewToggle current="grid" />
       </div>
+      <MobileHeader title="Portfolio" subtitle="Spatial, creative, interactive web dev" />
       <div className={styles.grid}>
         {PROJECTS.map((p) => (
           <ProjectCard key={p.title} {...p} />

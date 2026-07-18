@@ -25,3 +25,9 @@
   color: #333;
   background: #e8e8e8;
 }
+
+@media (max-width: 900px) {
+  .toggle {
+    display: none;
+  }
+}

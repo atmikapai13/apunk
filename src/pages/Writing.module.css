@@ -71,20 +71,21 @@
 }
 
 .categoryLink {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  vertical-align: baseline;
   font-size: var(--font-size-body);
   color: var(--text);
   text-decoration: none;
-  line-height: 1.0;
+  line-height: 1.3;
   color: var(--link)
 }
 
 .categoryArrow {
-  flex-shrink: 0;
+  vertical-align: -2px;
+  margin-right: 4px;
   color: var(--text);
+}
+
+.whitePaperArrow {
+  display: none;
 }
 
 .annotation {
@@ -208,4 +209,23 @@
 
 .bibItem {
   margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .whitePapersSection {
+    text-align: left;
+  }
+
+  .whitePapersSection .categoryList {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .annotation {
+    text-align: left;
+  }
+
+  .whitePaperArrow {
+    display: inline;
+  }
 }

@@ -73,7 +73,7 @@ export default function Home() {
 
         <div className={styles.bio}>
           <p>
-            Welcome, you've found Atmika Pai's little outpost on the internet.
+            Welcome to Atmika Pai's website.
           </p>
           <p>By way of introduction, I earned my bachelor's degree in data science and economics from <a href="" target="_blank" rel="noreferrer">UC Berkeley</a> and master's degree in information science and urban technology from <a href="https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-urban-tech/" target="_blank" rel="noreferrer">Cornell Tech</a>.</p>
           <p>

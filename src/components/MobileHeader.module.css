@@ -1,0 +1,31 @@
+.header {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .header {
+    display: block;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .title {
+    font-family: var(--font-family-headline);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 0px;
+    line-height: 1.1;
+  }
+
+  .subtitle {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--muted-text);
+    margin-top: 0px;
+    margin-bottom: -12px;
+  }
+}

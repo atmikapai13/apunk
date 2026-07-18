@@ -154,8 +154,50 @@
   margin: 0;
 }
 
+.contactPhotoWrap {
+  display: none;
+}
+
 @media (max-width: 900px) {
-  .right {
-    display: none;
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
+
+  .center {
+    max-width: none;
+  }
+
+  .photoWrap {
+    width: 100%;
+  }
+
+  .photo {
+    width: 60%;
+  }
+
+  .right {
+    margin-top: 32px;
+  }
+
+  .influence {
+    text-align: left;
+  }
+
+  .contactPhotoWrap {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contactPhoto {
+    width: 60%;
+    display: block;
+    border-radius: 2px;
+  }
+
+  .styles-bio{
+    font-size: 1.05rem;
+  }
+  
 }

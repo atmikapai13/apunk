@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import styles from './Writing.module.css'
+import MobileHeader from '../components/MobileHeader'
 import { writings as WRITINGS_DATA } from '../data/writings.json'
 
 const VISITED_KEY = 'visitedWritings'
@@ -88,7 +89,11 @@ function CategoryNode({ node, depth }) {
                     className={linkClass}
                     onClick={() => markVisited(w.slug)}
                   >
-                    {!isWhitePapers && <ArrowUpRight size={14} strokeWidth={2.1} className={styles.categoryArrow} />}
+                    <ArrowUpRight
+                      size={14}
+                      strokeWidth={2.1}
+                      className={`${styles.categoryArrow} ${isWhitePapers ? styles.whitePaperArrow : ''}`}
+                    />
                     {main}
                   </EntryLink>
                   {annotations.map((a, i) => <div key={i} className={styles.annotation}>— {a}</div>)}
@@ -104,6 +109,7 @@ function CategoryNode({ node, depth }) {
 function WritingIndex() {
   return (
     <div className={styles.center}>
+      <MobileHeader title="Writing" subtitle="Essays, white papers, and other musings" />
       {CATEGORY_TREE.map(node => <CategoryNode key={node.label} node={node} depth={0} />)}
     </div>
   )

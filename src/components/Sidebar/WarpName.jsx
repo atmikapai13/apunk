@@ -1,13 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
 
+const MOBILE_QUERY = '(max-width: 900px)'
+
 export default function WarpName() {
   const turbRef = useRef(null)
   const rafRef = useRef(null)
   const tRef = useRef(0)
   const [hovered, setHovered] = useState(false)
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia(MOBILE_QUERY).matches)
 
   useEffect(() => {
-    if (hovered) {
+    const mql = window.matchMedia(MOBILE_QUERY)
+    const onChange = () => setIsMobile(mql.matches)
+    mql.addEventListener('change', onChange)
+    return () => mql.removeEventListener('change', onChange)
+  }, [])
+
+  const active = isMobile || hovered
+
+  useEffect(() => {
+    if (active) {
       function animate() {
         if (turbRef.current) {
           const fx = 0.012 + Math.sin(tRef.current * 0.3) * 0.008
@@ -26,7 +38,7 @@ export default function WarpName() {
       }
     }
     return () => cancelAnimationFrame(rafRef.current)
-  }, [hovered])
+  }, [active])
 
   return (
     <svg
@@ -55,7 +67,7 @@ export default function WarpName() {
         </filter>
       </defs>
       <text
-        filter={hovered ? 'url(#warp)' : undefined}
+        filter={active ? 'url(#warp)' : undefined}
         fontFamily='"Space Mono", monospace'
         fontWeight="700"
         fontSize="20"
