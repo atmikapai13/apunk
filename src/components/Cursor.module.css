@@ -16,3 +16,9 @@
 :global(body.media-hover) .cursor {
   opacity: 0;
 }
+
+@media (max-width: 900px), (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}

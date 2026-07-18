@@ -88,4 +88,8 @@
   .navLink {
     font-size: 1.05rem;
   }
+
+  .clock {
+    font-size: 18px;
+  }
 }

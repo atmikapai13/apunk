@@ -40,10 +40,15 @@ export default function WarpName() {
     return () => cancelAnimationFrame(rafRef.current)
   }, [active])
 
+  const fontSize = isMobile ? 28 : 20
+  const width = isMobile ? 231 : 165
+  const height = isMobile ? 36 : 26
+  const y = isMobile ? 31 : 22
+
   return (
     <svg
-      width="165"
-      height="26"
+      width={width}
+      height={height}
       style={{ overflow: 'visible', display: 'block', cursor: 'none' }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -70,10 +75,10 @@ export default function WarpName() {
         filter={active ? 'url(#warp)' : undefined}
         fontFamily='"Space Mono", monospace'
         fontWeight="700"
-        fontSize="20"
+        fontSize={fontSize}
         fill='#111'
         x="0"
-        y="22"
+        y={y}
       >
         ATMIKA PAI
       </text>

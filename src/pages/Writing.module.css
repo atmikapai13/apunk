@@ -228,4 +228,20 @@
   .whitePaperArrow {
     display: inline;
   }
+
+  .categoryHeading {
+    margin-bottom: 16px;
+  }
+
+  .subcategoryHeading {
+    margin-top: 20px;
+  }
+
+  .subcategoryHeading:empty {
+    display: none;
+  }
+
+  .categoryList {
+    margin-top: -5px;
+  }
 }

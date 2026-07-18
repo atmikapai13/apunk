@@ -37,6 +37,13 @@ a, button, [role="button"] {
   cursor: none;
 }
 
+@media (max-width: 900px), (pointer: coarse) {
+  body,
+  a, button, [role="button"] {
+    cursor: auto;
+  }
+}
+
 a {
   color: var(--muted-text);
   text-decoration: none;
