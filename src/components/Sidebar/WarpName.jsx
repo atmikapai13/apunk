@@ -59,7 +59,7 @@ export default function WarpName() {
         fontFamily='"Space Mono", monospace'
         fontWeight="700"
         fontSize="20"
-        fill={hovered ? 'var(--link)' : '#111'}
+        fill='#111'
         x="0"
         y="22"
       >

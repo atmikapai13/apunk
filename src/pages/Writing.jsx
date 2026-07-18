@@ -41,7 +41,7 @@ function renderTitle(title) {
 const CATEGORY_TREE = [
   { label: 'Economics', children: [{ label: '', category: 'Econometrics' }, { label: 'Mapping the Bay', category: 'Mapping the Bay', italicPrefix: 'Series' }, { label: 'White Papers', category: 'Econometrics White Papers', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
   { label: 'Geospatial', children: [{ label: '', category: 'Cartography' }, { label: 'Conferences', category: 'Cartography Conferences' }, { label: 'White Papers', category: 'Cartography White Papers', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }, { label: 'Mentions', category: 'Cartography Mentions', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
-  { label: 'Literature', children: [{ label: '', category: 'Literature' }, { label: 'Philosophy', category: 'Philosophy' }] },
+  { label: 'Literature', children: [{ label: '', category: 'Literature' }, { label: 'Philosophy', category: 'Philosophy' }, { label: 'Film', category: 'Film' }] },
   { label: 'Mentions', children: [{ label: '', category: 'Mentions' }, { label: 'Keeping It Urban Summit (2026)', category: 'Keeping It Urban Summit' }] },
 ]
 
