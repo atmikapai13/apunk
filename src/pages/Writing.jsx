@@ -111,7 +111,7 @@ function CategoryNode({ node, depth }) {
 function WritingIndex() {
   return (
     <div className={styles.center}>
-      <MobileHeader title="Writing" subtitle="Essays, white papers, and other musings" />
+      <MobileHeader title="Writing" subtitle="essays, white papers, and musings" />
       {CATEGORY_TREE.map(node => <CategoryNode key={node.label} node={node} depth={0} />)}
     </div>
   )

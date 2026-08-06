@@ -1,58 +1,25 @@
-import { useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import styles from './Home.module.css'
 import atmika from '../assets/atmika.png'
-import peripheryCenterGif from '../assets/projects/periphery-center.gif'
-import nycEatsGif from '../assets/projects/nyceats.gif'
 import INFLUENCES from '../data/sidebar-influences.json'
 
 const ONGOINGS = [
-  { title: 'The Periphery Center', href: 'https://peripherycenter.com/', media: peripheryCenterGif },
-  { title: 'NYC Eats', href: 'https://nyceats.live/', media: nycEatsGif }
+  { title: 'The Periphery Center', href: 'https://peripherycenter.com/' },
+  { title: 'NYC Eats', href: 'https://nyceats.live/' }
 ]
 
 function OngoingList({ items }) {
-  const [activeIndex, setActiveIndex] = useState(null)
-  const [x, setX] = useState(0)
-
-  const handleContainerMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect()
-    setX(e.clientX - rect.left)
-  }
-
-  const activeMedia = activeIndex !== null ? items[activeIndex].media : null
-
   return (
-    <div className={styles.ongoingList} onMouseMove={handleContainerMouseMove}>
-      {items.map(({ title, href, media }, i) => (
+    <div className={styles.ongoingList}>
+      {items.map(({ title, href }) => (
         <div key={title} className={styles.projectItem}>
-          <a
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            onMouseEnter={() => media && setActiveIndex(i)}
-            onMouseLeave={() => setActiveIndex(current => current === i ? null : current)}
-          >
-            <span className={`${styles.projectContent} ${activeIndex === i ? styles.projectContentActive : ''}`}>
+          <a href={href} target="_blank" rel="noreferrer">
+            <span className={styles.projectContent}>
               <ArrowUpRight size={14} strokeWidth={2.1} />{title}
             </span>
           </a>
         </div>
       ))}
-      {activeMedia && (
-        <div
-          className={`${styles.ongoingMediaWrap} ${activeIndex === 0 ? styles.ongoingMediaWrapTop : styles.ongoingMediaWrapBottom}`}
-          style={{ left: x }}
-        >
-          <img
-            key={activeIndex}
-            src={activeMedia}
-            alt=""
-            aria-hidden="true"
-            className={styles.ongoingMedia}
-          />
-        </div>
-      )}
     </div>
   )
 }

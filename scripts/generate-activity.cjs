@@ -4,6 +4,7 @@ const path = require('path')
 
 const root = path.join(__dirname, '..')
 const outPath = path.join(root, 'src/data/activity.json')
+const lastUpdatedPath = path.join(root, 'src/data/lastUpdated.json')
 
 let activity = {}
 
@@ -15,7 +16,7 @@ try {
   })
   console.log(`Activity written: ${Object.keys(activity).length} days tracked`)
 } catch {
-  // No commits yet — preserve any existing file
+  // No commits yet — preserve any existing files
   if (fs.existsSync(outPath)) {
     console.log('No git history yet, keeping existing activity.json')
     process.exit(0)
@@ -24,3 +25,8 @@ try {
 }
 
 fs.writeFileSync(outPath, JSON.stringify(activity, null, 2))
+
+// Stamped at build time — npm run deploy always builds immediately before publishing,
+// so this reflects the actual deploy date rather than the last commit date.
+const today = new Date().toISOString().slice(0, 10)
+fs.writeFileSync(lastUpdatedPath, JSON.stringify({ date: today }, null, 2))

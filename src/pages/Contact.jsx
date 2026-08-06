@@ -1,11 +1,11 @@
 import styles from './Home.module.css'
 import MobileHeader from '../components/MobileHeader'
-import atmika from '../assets/atmika.png'
+import atmika from '../assets/atmika-scary.png'
 
 export default function Contact() {
   return (
     <div>
-      <MobileHeader title="Contact" subtitle="Tea and chatter" />
+      <MobileHeader title="Contact" subtitle="tea and chatter" />
       <div className={styles.contactPhotoWrap}>
         <img src={atmika} alt="Atmika Pai" className={styles.contactPhoto} />
       </div>

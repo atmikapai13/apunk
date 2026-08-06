@@ -89,7 +89,8 @@ export default function Projects() {
       <div className={styles.topBar}>
         <ViewToggle current="grid" />
       </div>
-      <MobileHeader title="Portfolio" subtitle="Spatial, creative, interactive web dev" />
+      <MobileHeader title="Portfolio" subtitle="Spatial and creative software
+      " />
       <div className={styles.grid}>
         {PROJECTS.map((p) => (
           <ProjectCard key={p.title} {...p} />
