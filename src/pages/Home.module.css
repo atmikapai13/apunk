@@ -56,6 +56,11 @@
   line-height: 1.4;
 }
 
+.projectItem a:hover {
+  color: var(--link);
+  font-weight: 600;
+}
+
 .projectContent {
   display: flex;
   align-items: center;
@@ -89,8 +94,8 @@
 .contactText {
   font-size: 0.95rem ;
   max-width: var(--content-width);
-  line-height: 1.25;  
-  margin: 0;
+  line-height: 1.25;
+  margin: 0 0 10px 0;
 }
 
 .contactPhotoWrap {

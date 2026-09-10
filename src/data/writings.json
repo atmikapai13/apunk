@@ -64,6 +64,24 @@
       "sections": []
     },
     {
+      "title": "Rules & Principles in Grice’s Theory of Conversation",
+      "slug": "2026-09-10-RulesPrinciplesInGricesTheoryOfConversation",
+      "date": "2026-09-10",
+      "year": 2026,
+      "category": "Philosophy",
+      "source": "https://medium.com/@atmikapai/rules-principles-in-grices-theory-of-conversation-0d719c5fc668",
+      "sections": []
+    },
+    {
+      "title": "On Daniel Dennett’s Intentional Stance and the Question of True Belief",
+      "slug": "2026-09-10-DennettsIntentionalStanceAndTrueBelief",
+      "date": "2026-09-10",
+      "year": 2026,
+      "category": "Philosophy",
+      "source": "https://medium.com/@atmikapai/dennetts-intentional-stance-and-the-question-of-true-belief-f8d564bebd43",
+      "sections": []
+    },
+    {
       "title": "Absurdism in *The Hitchhiker's Guide to the Galaxy* and *Alice's Adventures in Wonderland*",
       "slug": "2018-05-01-AbsurdismInHitchhikersGuideAndAliceInWonderland",
       "date": "2018-05-01",
@@ -116,9 +134,31 @@
       "slug": "2026-02-15-NYCEatsMaps",
       "date": "2026-02-15",
       "year": 2026,
-      "category": "Cartography",
+      "category": "The New York Trilogy",
       "order": 1,
       "source": "https://medium.com/between-the-graticules/nyc-eats-new-digital-interfaces-for-maps-chatbots-5e562694d671",
+      "sections": []
+    },
+    {
+      "title": "NYC Races",
+      "slug": "2025-08-06-NYCRaces",
+      "date": "2025-08-06",
+      "year": 2025,
+      "category": "The New York Trilogy",
+      "order": 2,
+      "source": "https://medium.com/map-nyc/nyc-runs-99234a716c36",
+      "sections": []
+    },
+    {
+      "title": "NYC Screens",
+      "slug": "2025-07-01-NYCScreens",
+      "date": "2025-07-01",
+      "year": 2025,
+      "category": "The New York Trilogy",
+      "order": 3,
+      "embed": "https://embed.figma.com/proto/A8IxNabbUxPRPWp4aWulRf/NYC-Screens?node-id=361-2282&embed-host=share",
+      "embedStyle": { "width": "390px", "height": "650px", "border": "1px solid rgba(0, 0, 0, 0.1)", "display": "block", "margin": "20px 0 0" },
+      "embedFullScreen": true,
       "sections": []
     },
     {

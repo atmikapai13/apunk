@@ -10,13 +10,17 @@ export default function Contact() {
         <img src={atmika} alt="Atmika Pai" className={styles.contactPhoto} />
       </div>
       <p className={styles.contactText}>
-        You can share your ideas with me at <a href="mailto:atmikapai13@gmail.com">atmikapai13 [at] gmail [.] com</a>, and find other musings on <a href="https://x.com/ap131999" target="_blank" rel="noreferrer">X</a>.
-      </p>
+        The beauty of living in New York City is that the density of people and ideas offers up serendipitous encounters. To that end, if you are in NYC, I'm always happy to grab coffee in Brooklyn, my abode. But, if you're not in NYC, book some time on my <a href="https://calendar.app.google/LgDoohMegwTQqQ3F9" target="_blank" rel="noreferrer">GCal</a>.
+        </p>
       <p className={styles.contactText}>
-        If you're not in NYC, still happy to chat! Book some time on my <a href="https://calendar.app.google/LgDoohMegwTQqQ3F9" target="_blank" rel="noreferrer">GCal</a>.
-      </p>
-      <p className={styles.contactText}>
-        My code lives and breathes on <a href="https://github.com/atmikapai13" target="_blank" rel="noreferrer">Github</a>.
+        = <a href="mailto:atmikapai13@gmail.com">atmikapai13 [at] gmail [.] com</a>
+        <br></br>
+        = <a href="https://x.com/ap131999" target="_blank" rel="noreferrer">Twitter</a>
+      <br></br>
+        = <a href="https://github.com/atmikapai13" target="_blank" rel="noreferrer">Github</a>
+      <br></br>
+        = <a href="https://www.linkedin.com/in/atmikapai/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <br></br>
       </p>
     </div>
   )

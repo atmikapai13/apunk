@@ -41,8 +41,8 @@ function renderTitle(title) {
 
 const CATEGORY_TREE = [
   { label: 'Economics', children: [{ label: '', category: 'Econometrics' }, { label: 'Mapping the Bay', category: 'Mapping the Bay', italicPrefix: 'Series' }, { label: 'White Papers', category: 'Econometrics White Papers', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
-  { label: 'Spatial', children: [{ label: '', category: 'Cartography' }, { label: 'Conferences', category: 'Cartography Conferences' }, { label: 'White Papers', category: 'Cartography White Papers', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }, { label: 'Mentions', category: 'Cartography Mentions', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
-  { label: 'Literature', children: [{ label: '', category: 'Literature' }, { label: 'Philosophy', category: 'Philosophy' }, { label: 'Film', category: 'Film' }] },
+  { label: 'Spatial', children: [{ label: '', category: 'Cartography' }, { label: 'The New York Trilogy', category: 'The New York Trilogy', italicPrefix: 'Series' }, { label: 'Conferences', category: 'Cartography Conferences' }, { label: 'White Papers', category: 'Cartography White Papers', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }, { label: 'Mentions', category: 'Cartography Mentions', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
+  { label: 'Arts & Culture', children: [{ label: '', category: 'Arts & Culture' }, { label: 'Literature', category: 'Literature' }, { label: 'Philosophy', category: 'Philosophy' }, { label: 'Film', category: 'Film' }] },
   { label: 'Mentions', children: [{ label: '', category: 'Mentions' }, { label: 'Keeping It Urban Summit (2026)', category: 'Keeping It Urban Summit' }] },
 ]
 
@@ -138,7 +138,9 @@ function Article({ article }) {
           <iframe
             src={article.embed}
             className={styles.sectionDocument}
+            style={article.embedStyle}
             allow="autoplay"
+            allowFullScreen={article.embedFullScreen}
             title={article.title}
           />
         )}

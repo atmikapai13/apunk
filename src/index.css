@@ -56,8 +56,8 @@ a {
 a:hover {
   color: var(--link);
   text-decoration: none;
-  font-style: italic;
   font-weight: 600;
+
 }
 
 img {
