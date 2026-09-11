@@ -10,7 +10,7 @@ export default function Contact() {
         <img src={atmika} alt="Atmika Pai" className={styles.contactPhoto} />
       </div>
       <p className={styles.contactText}>
-        The beauty of living in New York City is that the density of people and ideas offers serendipitous encounters. To that end, if you are in NYC, I'm happy to grab a coffee. If you prefer the virtual realm, book some time on my <a href="https://calendar.app.google/LgDoohMegwTQqQ3F9" target="_blank" rel="noreferrer">GCal</a>.
+        The beauty of living in New York City is that the density of people and ideas offers serendipitous encounters. So, if you’re in NYC, I’m happy to grab a coffee — shoot me an email. If you prefer the virtual realm, book some time on my <a href="https://calendar.app.google/LgDoohMegwTQqQ3F9" target="_blank" rel="noreferrer">GCal</a>.
         </p>
       <p className={styles.contactText}>
         = <a href="mailto:atmikapai13@gmail.com">atmikapai13 [at] gmail [.] com</a>
