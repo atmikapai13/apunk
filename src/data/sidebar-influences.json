@@ -14,7 +14,8 @@
   [
     { "name": "Emily Segal", "url": "https://nemesisglobal.substack.com/p/tasteslop" },
     { "name": "Ed Zitron", "url": "https://www.wheresyoured.at/" },
-    { "name": "Riley Walz", "url": "https://walzr.com/" }
+    { "name": "Riley Walz", "url": "https://walzr.com/" },
+    { "name": "Kyle MacDonald", "url": "https://kylemcdonald.net/" }
   ],
   [
     { "name": "K-Punk", "url": "http://k-punk.abstractdynamics.org/archives/007666.html" }
@@ -36,13 +37,13 @@
   [
     { "name": "Billy Wilder", "url": "https://www.youtube.com/watch?v=HduXGYkoc_w" },
     { "name": "James Stewart", "url": "https://www.youtube.com/watch?v=iLR3gZrU2Xo" },
-    { "name": "Lana Del Rey" },
+    { "name": "Ross McElwee" },
     { "name": "Lena Dunham", "url": "https://play.hbomax.com/show/2262487a-fc52-4543-901d-c07d92ad8844" }
   ],
   [
     { "name": "Sheila Jasanoff", "url": "https://press.uchicago.edu/ucp/books/book/chicago/D/bo20836025.html" },
     { "name": "Harald Haraldsson", "url": "https://haraldharaldsson.com/" },
     { "name": "Greg Pass", "url": "https://backslash.org/artists" },
-    { "name": "Emmanuel Saez", "url": "https://scholar.google.com/citations?user=qZpr_CQAAAAJ&hl=en" }
+    { "name": "Emmanuel Saez", "url": "https://scholar.google.com/citations?user=qZpr_CQAAAAJ&hl=en"}
   ]
 ]
