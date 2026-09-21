@@ -76,7 +76,7 @@ export default function WarpName() {
         fontFamily='"Space Mono", monospace'
         fontWeight="700"
         fontSize={fontSize}
-        fill='#111'
+        fill={isMobile || hovered ? '#0000EE' : '#111'}
         x="0"
         y={y}
       >

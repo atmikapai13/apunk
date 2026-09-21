@@ -40,14 +40,14 @@ export default function Home() {
 
         <div className={styles.bio}>
           <p>
-            Welcome to Atmika Pai's website!
+            Welcome to Atmika Pai's website.
           </p>
-          <p>By way of introduction, I earned my bachelor's degree in data science and economics from <a href="" target="_blank" rel="noreferrer">UC Berkeley</a> and master's degree in information science and urban technology from <a href="https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-urban-tech/" target="_blank" rel="noreferrer">Cornell Tech</a> in New York City, which is where I live now.</p>
+          <p>By way of introduction, I earned my bachelor's degree in data science and economics from <a href="" target="_blank" rel="noreferrer">UC Berkeley</a> and master's degree in information science and urban technology from <a href="https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-urban-tech/" target="_blank" rel="noreferrer">Cornell Tech</a> in New York City, where I reside now.</p>
           <p>
             I worked briefly at <a href="" target="_blank" rel="noreferrer">AAA Insurance</a>, followed by short stints at startups building bespoke geospatial applications. Now, I'm at <a href="https://www.tcs.com/what-we-do/industries/capital-markets" target="_blank" rel="noreferrer">Tata Consultancy Services</a>, learning the inner machinations of a multinational corporation from the purview of an AI engineer.
           </p>
           <p>
-            I like to build applications that 1) <a href="https://nyceats.live/spring2026/" target="_blank" rel="noreferrer">fill everyday life with whimsy and jest</a> 2) <a href="https://nyceats.live/worldcup2026/" target="_blank" rel="noreferrer">for my friends or local neighbourhood</a> or 3) <a href="https://atmikapai13.github.io/textmenot/" target="_blank" rel="noreferrer">satirize our algorithmized, hyperreal digital life</a>. This typically takes the form of spatial or creative software.
+            I like to build applications that 1) <a href="https://nyceats.live/" target="_blank" rel="noreferrer">fill everyday life with whimsy and jest</a> 2) <a href="https://keepingiturban.com" target="_blank" rel="noreferrer">for my friends or local neighbourhood</a> or 3) <a href="https://atmikapai13.github.io/textmenot/" target="_blank" rel="noreferrer">satirize our algorithmized, hyperreal digital life</a>. This typically takes the form of spatial or creative software.
           </p>
         </div>
 
