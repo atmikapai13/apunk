@@ -13,11 +13,11 @@
 }
 
 .heading {
-  font-size: 1.4rem;
+  font-size: var(--text-lg);
   font-weight: 700;
   letter-spacing: 0.04em;
   margin: 0 0 48px;
-  line-height: 1;
+  line-height: var(--leading-tight);
 }
 
 .grid {
@@ -73,11 +73,11 @@
 
 .title {
   font-family: var(--font-family-headline);
-  font-size: var(--font-size-headline);
+  font-size: var(--text-headline);
   font-weight: var(--font-weight-headline);
   letter-spacing: var(--letter-spacing-headline);
   color: var(--text);
-  line-height: 1.1;
+  line-height: var(--leading-tight);
   margin: 0 0 12px;
   display: flex;
   align-items: center;
@@ -99,7 +99,7 @@
 }
 
 .tag {
-  font-size: 0.75rem;
+  font-size: var(--text-xs);
   font-weight: 700;
   letter-spacing: 0.08em;
   color: var(--muted-text);
@@ -146,7 +146,7 @@
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: var(--text-xl);
     max-width: 100%;
     overflow-wrap: break-word;
     word-break: break-word;

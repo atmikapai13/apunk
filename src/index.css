@@ -7,19 +7,33 @@
   --bg: #f8fbfd;
   --text: #111;
   --muted: #666;
-  --muted-text: #999;
+  --muted-text: #727272;  /* 4.6:1 on the page background; the old #999 was 2.7:1 */
   --faint-text: #bbb;
   --accent: #000;
   --link: #0000EE;
   --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --mono: ui-monospace, 'Fira Mono', monospace;
   --content-width: 600px;
-  --font-size-body: 0.95rem;
-  --font-size-writing: 14px;
   --font-family-headline: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-size-headline: 3rem;
   --font-weight-headline: 400;
   --letter-spacing-headline: 0.05em;
+
+  /* Type scale. Use these instead of one-off sizes. */
+  --text-xs: 0.75rem;        /* tags, influences */
+  --text-sm: 0.9rem;         /* nav links, captions */
+  --text-body: 0.95rem;      /* body text, fixed size */
+  --text-reading: 0.95rem;   /* body text that grows to 1rem on small screens (see below) */
+  --text-article: 14px;      /* long-form article text */
+  --text-md: 1.2rem;
+  --text-lg: 1.5rem;
+  --text-xl: 1.8rem;
+  --text-headline: 3rem;     /* page and section titles */
+
+  /* Line heights */
+  --leading-tight: 1.1;      /* headings */
+  --leading-normal: 1.25;    /* compact text, lists, UI */
+  --leading-loose: 1.5;      /* comfortable reading */
+  --leading-prose: 1.6;      /* page default and long prose */
 }
 
 body {
@@ -28,7 +42,7 @@ body {
   color: var(--text);
   font-family: var(--font);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: var(--leading-prose);
   -webkit-font-smoothing: antialiased;
   cursor: none;
 }
@@ -44,7 +58,7 @@ a, button, [role="button"] {
   }
 
   :root {
-    --font-size-body: 1rem;
+    --text-reading: 1rem;
   }
 }
 

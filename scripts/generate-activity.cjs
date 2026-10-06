@@ -26,24 +26,33 @@ try {
 
 fs.writeFileSync(outPath, JSON.stringify(activity, null, 2))
 
-// "Last updated" is the date of the latest commit that changed the site itself. Commits that only touch the
-// weekly events data (or the files this script generates) don't count, so the Instinct agent's weekly
-// events.json update leaves the date alone. Needs full git history, which the deploy workflow checks out.
-const CONTENT_PATHSPEC = [
-  'src/',
-  ':(exclude)src/data/events.json',
-  ':(exclude)src/data/activity.json',
-  ':(exclude)src/data/lastUpdated.json',
-]
+// "Last updated" is tracked separately for me and for my Instinct agent.
+// The agent only refreshes the weekly calendar, so a commit that changes nothing in src/ except
+// src/data/events.json counts as the agent's. Any other commit that changes site files counts as mine.
+// Files this script generates are ignored. Needs full git history, which the deploy workflow checks out.
+const AGENT_FILES = new Set(['src/data/events.json'])
+const GENERATED_FILES = new Set(['src/data/activity.json', 'src/data/lastUpdated.json'])
 
 try {
-  const lastContentDate = execFileSync(
-    'git', ['log', '-1', '--format=%ad', '--date=short', '--', ...CONTENT_PATHSPEC],
-    { cwd: root }
-  ).toString().trim()
-  if (lastContentDate) {
-    fs.writeFileSync(lastUpdatedPath, JSON.stringify({ date: lastContentDate }, null, 2))
-    console.log(`Last updated: ${lastContentDate}`)
+  const log = execFileSync('git', ['log', '--format=@@%h %ad', '--date=short', '--name-only'], { cwd: root }).toString()
+  let me = null
+  let agent = null
+  for (const block of log.split('@@').filter(Boolean)) {
+    const [header, ...fileLines] = block.split('\n')
+    const [hash, date] = header.split(' ')
+    const srcFiles = fileLines.filter(f => f.startsWith('src/') && !GENERATED_FILES.has(f))
+    if (srcFiles.length === 0) continue
+    const agentOnly = srcFiles.every(f => AGENT_FILES.has(f))
+    if (agentOnly && !agent) agent = { date, hash }
+    if (!agentOnly && !me) me = { date, hash }
+    if (me && agent) break
+  }
+  const lastUpdated = {}
+  if (me) lastUpdated.me = me.date
+  if (agent) lastUpdated.agent = agent.date
+  if (me || agent) {
+    fs.writeFileSync(lastUpdatedPath, JSON.stringify(lastUpdated, null, 2))
+    console.log(`Last updated: me ${me?.date} (${me?.hash}), agent ${agent?.date} (${agent?.hash})`)
   }
 } catch {
   console.log('Could not read git history, keeping existing lastUpdated.json')

@@ -8,14 +8,7 @@
 }
 
 .categoryHeading {
-  font-family: var(--font-family-headline);
-  font-size: var(--font-size-headline);
-  font-weight: var(--font-weight-headline);
-  letter-spacing: var(--letter-spacing-headline);
-  color: var(--text);
-  line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: 0;
+  composes: headingSection from '../styles/typography.module.css';
 }
 
 .subcategory {
@@ -23,21 +16,13 @@
 }
 
 .subcategoryHeading {
-  font-family: var(--font-family-headline);
-  font-size: 1.75rem;
-  margin-top: 0;
-  margin-bottom: -5px;
+  composes: headingSub from '../styles/typography.module.css';
 }
 
 .whitePapersHeading {
-  font-family: var(--font);
-  font-size: 1.0rem;
+  composes: label from '../styles/typography.module.css';
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
   margin-top: 30px;
-  /*text-decoration: underline;*/
-
 }
 
 .categoryList {
@@ -48,7 +33,7 @@
 
 
 .categoryList li {
-  line-height: 1.0;
+  line-height: var(--leading-tight);
   margin-bottom: 1px;
 }
 
@@ -59,7 +44,7 @@
 .whitePapersSection .categoryList {
   max-width: 450px;
   margin-left: auto;
-  line-height: 1.2;
+  line-height: var(--leading-normal);
 }
 
 .whitePapersSection .categoryList li {
@@ -79,10 +64,10 @@
 }
 
 .categoryLink {
-  font-size: var(--font-size-body);
+  font-size: var(--text-reading);
   color: var(--text);
   text-decoration: none;
-  line-height: 1.3;
+  line-height: var(--leading-normal);
   color: var(--link)
 }
 
@@ -99,8 +84,8 @@
 .annotation {
   display: block;
   padding-left: 20px;
-  font-size: var(--font-size-body);
-  line-height: 1.2;
+  font-size: var(--text-reading);
+  line-height: var(--leading-normal);
   color: var(--muted-text);
 }
 
@@ -135,12 +120,12 @@
 
 .articleTitle {
   font-family: var(--font-family-headline);
-  font-size: var(--font-size-headline);
+  font-size: var(--text-headline);
   font-weight: var(--font-weight-headline);
       letter-spacing: 0.01em;
   color: var(--text);
   margin: 0 0 0px;
-  line-height: 1.0;
+  line-height: var(--leading-tight);
 }
 
 .articleTitleLink {
@@ -170,16 +155,16 @@
 }
 
 .sectionHeading {
-  font-size: 1.2rem;
+  font-size: var(--text-md);
   font-weight: 700;
   margin: 24px 0 8px;
 }
 
 .articleBody {
   font-family: 'Inter', Inter, sans-serif;
-  font-size: var(--font-size-writing);
+  font-size: var(--text-article);
   font-weight: 400;
-  line-height: 1.43;
+  line-height: var(--leading-loose);
   color: #222;
   margin: 0 0 16px;
 }
@@ -200,9 +185,9 @@
 }
 
 .bibliography {
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
   color: var(--muted-text);
-  line-height: 1.7;
+  line-height: var(--leading-prose);
   padding-left: 20px;
   margin: 8px 0 0;
 }
@@ -241,29 +226,33 @@
     display: inline;
   }
 
+  /* Section headings match the size of the "Writing" page header (MobileHeader title, 1.5rem);
+     sub-section headings such as the "Series" ones sit below that. */
   .categoryHeading {
-    margin-bottom: 16px;
+    font-size: var(--text-lg);
+    margin-bottom: 10px;
   }
 
   .subcategoryHeading {
-    margin-top: 20px;
+    font-size: 16px;
+    margin-top: 14px;
   }
 
   .categoryList {
-    margin-top: -5px;
+    margin-top: 0;
   }
 
-  /* looser line spacing for reading on a phone */
+  /* Lines of one entry stay close together, with a clear gap between entries so wrapped titles read as one item */
   .categoryList li {
-    line-height: 1.5;
-    margin-bottom: 3px;
+    line-height: var(--leading-tight);
+    margin-bottom: 7px;
   }
 
   .categoryLink {
-    line-height: 1.5;
+    line-height: var(--leading-tight);
   }
 
   .annotation {
-    line-height: 1.4;
+    line-height: var(--leading-loose);
   }
 }

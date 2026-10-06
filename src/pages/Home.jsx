@@ -64,7 +64,7 @@ export default function Home() {
         </div>
 
         <div id="projects" className={styles.recentWorks}>
-          <Accordion title="Recent works" headingClassName={styles.contactHeading} defaultOpen={false} noTopLine>
+          <Accordion id="recent-works" title="Recent works" defaultOpen={false} noTopLine>
             <OngoingList items={ONGOINGS} />
           </Accordion>
         </div>

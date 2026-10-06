@@ -9,13 +9,13 @@
 }
 
 .clock {
-  font-family: Garamond, 'Times New Roman', serif;
-  font-size: 14px;
+  font-family: var(--mono);
+  font-size: 12px;
   font-weight: 400;
-  color: var(--text);
-  margin: 0;
+  line-height: var(--leading-tight);
+  color: var(--muted-text);
+  margin: 6px 0 0; /* a little gap under the name */
   padding: 0;
-  font-style: italic;
 }
 
 .nav {
@@ -25,10 +25,10 @@
 }
 
 .navLink {
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   color: var(--text);
   text-decoration: none;
-  line-height: 1.4;
+  line-height: var(--leading-loose);
 }
 
 .navLink:hover {
@@ -38,7 +38,9 @@
 }
 
 .navActive {
+  color: var(--link);
   font-weight: 700;
+  font-style: italic;
 }
 
 .mobileToggle {
@@ -87,10 +89,10 @@
   }
 
   .navLink {
-    font-size: 1.05rem;
+    font-size: var(--text-reading);
   }
 
   .clock {
-    font-size: 18px;
+    font-size: 15px;
   }
 }

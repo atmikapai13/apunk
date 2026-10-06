@@ -1,0 +1,31 @@
+/* Shared typography classes. Other stylesheets pull these in with `composes`, so each style is defined once.
+   Keep these to the shared basics: whoever composes a class sets its colour, weight and spacing. */
+
+/* Large page-section heading, e.g. "Economics" */
+.headingSection {
+  font-family: var(--font-family-headline);
+  font-size: var(--text-headline);
+  font-weight: var(--font-weight-headline);
+  letter-spacing: var(--letter-spacing-headline);
+  color: var(--text);
+  line-height: var(--leading-normal);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Sub-section heading, e.g. "Series: Mapping the Bay" */
+.headingSub {
+  font-family: var(--font-family-headline);
+  font-size: var(--text-xl);
+  margin-top: 0;
+  margin-bottom: -5px;
+}
+
+/* Small uppercase label, e.g. the accordion headings and "White Papers".
+   Declared after the headings above so it wins where both are applied to one element. */
+.label {
+  font-family: var(--font);
+  font-size: var(--text-reading);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}

@@ -54,12 +54,11 @@
 
 .bio {
   margin-top: 16px;
-  font-size: 4rem;
 }
 
 .bio p {
-  font-size: 0.95rem;
-  line-height: 1.25;
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
   margin: 0 0 14px;
 }
 
@@ -67,11 +66,6 @@
 /* Slightly heavier than the paragraphs below; `.bio p` sets its own styles, hence the extra specificity */
 .bio p.welcome {
   font-weight: 500;
-}
-
-.sectionLabel {
-  font-size: 0.95rem;
-  margin: 24px 0 6px;
 }
 
 .ongoingList {
@@ -83,13 +77,13 @@
 }
 
 .projectItem a {
-  font-size: 0.95rem;
+  font-size: var(--text-body);
   color: var(--text);
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 4px;
-  line-height: 1.4;
+  line-height: var(--leading-loose);
 }
 
 .projectItem a:hover {
@@ -125,10 +119,10 @@
 
 .influence {
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: var(--text-xs);
   color: #bbb;
   margin: 0 0 2px;
-  line-height: 1.6;
+  line-height: var(--leading-prose);
   text-align: right;
 }
 
@@ -147,9 +141,9 @@
 }
 
 .contactText {
-  font-size: 0.95rem ;
+  font-size: var(--text-body);
   max-width: var(--content-width);
-  line-height: 1.25;
+  line-height: var(--leading-normal);
   margin: 0 0 10px 0;
 }
 
@@ -190,7 +184,7 @@
   }
 
   .influenceSpacer {
-    flex: 0 0 calc(0.78rem * 1.6); /* one influence line height, i.e. a line break */
+    flex: 0 0 calc(var(--text-xs) * var(--leading-prose)); /* one influence line height, i.e. a line break */
     min-height: 0;
     max-height: none;
   }
@@ -212,18 +206,18 @@
   }
 
   .bio p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: var(--text-body);
+    line-height: var(--leading-loose);
   }
 
   .projectItem a {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: var(--text-body);
+    line-height: var(--leading-loose);
   }
 
   /* intro paragraphs and calendar text (also the Contact page copy) */
   .contactText {
-    line-height: 1.5;
+    line-height: var(--leading-loose);
   }
 }
 
@@ -265,16 +259,6 @@
 
 .calendarIntro {
   margin: 0 0 12px;
-}
-
-.contactHeading {
-  font-family: var(--font);
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-  line-height: 1.25;
-  margin: 0 0 4px;
 }
 
 .eventArrow {

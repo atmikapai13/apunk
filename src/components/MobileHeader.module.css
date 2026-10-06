@@ -12,18 +12,18 @@
 
   .title {
     font-family: var(--font-family-headline);
-    font-size: 1.5rem;
+    font-size: var(--text-lg);
     font-weight: 600;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: var(--text);
     margin: 0 0 0px;
-    line-height: 1.1;
+    line-height: var(--leading-tight);
   }
 
   .subtitle {
     font-family: var(--mono);
-    font-size: 0.85rem;
+    font-size: var(--text-sm);
     color: var(--muted-text);
     margin-top: 0px;
     margin-bottom: -12px;
