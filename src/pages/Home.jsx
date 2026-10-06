@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 import styles from './Home.module.css'
 import atmika from '../assets/atmika.png'
 import Accordion from '../components/Accordion'
+import AccordionGroup from '../components/AccordionGroup'
 import EventsCalendar from '../components/EventsCalendar'
 import INFLUENCES from '../data/sidebar-influences.json'
 
@@ -63,13 +64,18 @@ export default function Home() {
           </p>
         </div>
 
-        <div id="projects" className={styles.recentWorks}>
-          <Accordion id="recent-works" title="Recent works" defaultOpen={false} noTopLine>
-            <OngoingList items={ONGOINGS} />
-          </Accordion>
-        </div>
+        {/* only one of these is open at a time: opening one closes the other */}
+        <AccordionGroup id="home">
+          <div className={styles.accordions}>
+            <EventsCalendar />
 
-        <EventsCalendar />
+            <div id="projects">
+              <Accordion id="recent-works" title="Recent works" noTopLine fadeStart={50}>
+                <OngoingList items={ONGOINGS} />
+              </Accordion>
+            </div>
+          </div>
+        </AccordionGroup>
       </main>
 
       <aside className={styles.right}>

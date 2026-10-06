@@ -2,8 +2,14 @@
   padding: 4px 0;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  /* lines stay at full strength under the heading (--fade-start is its width), then fade out towards the right */
-  border-image: linear-gradient(to right, rgba(128, 128, 128, 0.4) var(--fade-start, 0px), rgba(128, 128, 128, 0)) 1;
+  /* The line is at full strength under the heading (--fade-start is its width), then fades to nothing over the next
+     --fade-length, so a shorter heading's line ends sooner. */
+  --fade-length: 220px;
+  border-image: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.4) var(--fade-start, 0px),
+    rgba(128, 128, 128, 0) calc(var(--fade-start, 0px) + var(--fade-length))
+  ) 1;
 }
 
 .noTopLine {

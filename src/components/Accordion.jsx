@@ -1,5 +1,6 @@
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useContext, useLayoutEffect, useRef, useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
+import { AccordionGroupContext } from './AccordionGroup'
 import styles from './Accordion.module.css'
 
 const STORAGE_PREFIX = 'accordion-open:'
@@ -27,27 +28,38 @@ function saveOpen(id, open) {
   }
 }
 
-export default function Accordion({ id, title, teaser, defaultOpen = true, noTopLine = false, children }) {
-  const [open, setOpen] = useState(() => readOpen(id, defaultOpen))
+export default function Accordion({ id, title, teaser, defaultOpen = true, noTopLine = false, fadeStart, children }) {
+  // Inside an AccordionGroup the group decides which one is open; on its own it keeps (and remembers) its own state
+  const group = useContext(AccordionGroupContext)
+  const [ownOpen, setOwnOpen] = useState(() => readOpen(id, defaultOpen))
+  const open = group ? group.openId === id : ownOpen
   const Icon = open ? Minus : Plus
   const sectionRef = useRef(null)
   const labelRef = useRef(null)
 
   // The lines start fading where the heading (title and icon) ends, so a longer title keeps its line solid for longer.
-  // The teaser isn't counted, so the fade doesn't move when it appears.
+  // The teaser isn't counted, so the fade doesn't move when it appears. Pass `fadeStart` (px) to fix the point instead.
   useLayoutEffect(() => {
     const section = sectionRef.current
+    if (fadeStart !== undefined) {
+      section.style.setProperty('--fade-start', `${fadeStart}px`)
+      return undefined
+    }
     const label = labelRef.current
     const update = () => section.style.setProperty('--fade-start', `${label.offsetWidth + ICON_GAP + ICON_SIZE}px`)
     update()
     const observer = new ResizeObserver(update)
     observer.observe(label)
     return () => observer.disconnect()
-  }, [])
+  }, [fadeStart])
 
   const toggle = () => {
+    if (group) {
+      group.toggle(id)
+      return
+    }
     const next = !open
-    setOpen(next)
+    setOwnOpen(next)
     saveOpen(id, next)
   }
 

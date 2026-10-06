@@ -267,6 +267,7 @@
 }
 
 
-.recentWorks {
+/* the collapsible sections under the intro: My calendar, then Recent works */
+.accordions {
   margin-top: 28px;
 }
