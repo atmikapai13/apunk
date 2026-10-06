@@ -6,7 +6,7 @@
 }
 
 .center {
-  max-width: 500px;
+  max-width: var(--content-width);
 }
 
 /* Pinned to the top of the viewport with a full-width background, so the text scrolls underneath it.

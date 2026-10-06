@@ -11,7 +11,7 @@ export default function Contact() {
       </div>
       <p className={styles.contactText}>
         The beauty of living in New York City is that the density of people & ideas offers serendipitous encounters. 
-        If you’re in NYC and want to chat, let's grab a coffee. If you prefer the virtual realm, book some time on my <a href="https://calendar.app.google/LgDoohMegwTQqQ3F9" target="_blank" rel="noreferrer">GCal</a>.
+        If you’re in NYC and want to chat, let's grab a coffee. If you prefer the virtual realm, book some time on my <a href="https://calendar.app.google/LgDoohMegwTQqQ3F9" target="_blank" rel="noreferrer">Google Calendar</a>.
         </p>
       <p className={styles.contactText}>
         = <a href="mailto:atmikapai13@gmail.com">atmikapai13 [at] gmail [.] com</a>
