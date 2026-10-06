@@ -150,3 +150,59 @@
     line-height: 1.2;
   }
 }
+
+.eventList {
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+
+.eventList li {
+  margin-bottom: 3px;
+}
+
+.eventDate {
+  display: inline-block;
+  width: 6em;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.eventBody {
+  display: inline-block;
+  vertical-align: top;
+  max-width: calc(100% - 6em);
+}
+
+.eventNote {
+  display: block;
+  color: var(--text);
+}
+
+.calendar {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.calendarNote {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted-text);
+}
+
+.contactHeading {
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin: 0 0 4px;
+}
+
+.calendarFooter {
+  margin: 10px 0 0;
+}
+
+.eventArrow {
+  vertical-align: -2px;
+  margin-left: 3px;
+}
