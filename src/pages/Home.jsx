@@ -1,11 +1,13 @@
+import { Fragment } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import styles from './Home.module.css'
 import atmika from '../assets/atmika.png'
+import EventsCalendar from '../components/EventsCalendar'
 import INFLUENCES from '../data/sidebar-influences.json'
 
 const ONGOINGS = [
-  { title: 'The Periphery Center', href: 'https://peripherycenter.com/' },
-  { title: 'NYC Eats', href: 'https://nyceats.live/' }
+  { title: 'NYC Eats', href: 'https://nyceats.live/' },
+  { title: 'The Periphery Center', href: 'https://peripherycenter.com/' }
 ]
 
 function OngoingList({ items }) {
@@ -40,9 +42,9 @@ export default function Home() {
 
         <div className={styles.bio}>
           <p>
-            Welcome to Atmika Pai's website.
+            Welcome to Atmika Pai's website!
           </p>
-          <p>By way of introduction, I earned my bachelor's degree in data science and economics from <a href="" target="_blank" rel="noreferrer">UC Berkeley</a> and master's degree in information science and urban technology from <a href="https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-urban-tech/" target="_blank" rel="noreferrer">Cornell Tech</a> in New York City, where I reside now.</p>
+          <p>By way of introduction, I earned my bachelor's degree in data science and economics from <a href="" target="_blank" rel="noreferrer">UC Berkeley</a> and master's degree in information science and urban technology from <a href="https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-urban-tech/" target="_blank" rel="noreferrer">Cornell Tech</a> in New York City (where I live now).</p>
           <p>
             I worked briefly at <a href="" target="_blank" rel="noreferrer">AAA Insurance</a>, followed by short stints at startups building bespoke geospatial applications. Now, I'm at <a href="https://www.tcs.com/what-we-do/industries/capital-markets" target="_blank" rel="noreferrer">Tata Consultancy Services</a>, learning the inner machinations of a multinational corporation from the purview of an AI engineer.
           </p>
@@ -55,19 +57,26 @@ export default function Home() {
           <p className={styles.sectionLabel}>Recent works:</p>
           <OngoingList items={ONGOINGS} />
         </div>
+
+        <hr className={styles.separator} />
+
+        <EventsCalendar />
       </main>
 
       <aside className={styles.right}>
         {INFLUENCES.map((group, gi) => (
-          <div key={gi} className={styles.influenceGroup}>
-            {group.map(({ name, url }, ni) => (
-              <p key={`${gi}-${ni}`} className={styles.influence}>
-                {url
-                  ? <a href={url} target="_blank" rel="noreferrer">{name}</a>
-                  : name}
-              </p>
-            ))}
-          </div>
+          <Fragment key={gi}>
+            {gi > 0 && <div className={styles.influenceSpacer} aria-hidden="true" />}
+            <div className={styles.influenceGroup}>
+              {group.map(({ name, url }, ni) => (
+                <p key={`${gi}-${ni}`} className={styles.influence}>
+                  {url
+                    ? <a href={url} target="_blank" rel="noreferrer">{name}</a>
+                    : name}
+                </p>
+              ))}
+            </div>
+          </Fragment>
         ))}
       </aside>
     </div>

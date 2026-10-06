@@ -68,8 +68,22 @@
 }
 
 
+.right {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .influenceGroup {
-  margin-bottom: 20px;
+  margin: 0;
+}
+
+/* Shares the free height evenly between groups, but never less than 8px or more than 40px */
+.influenceSpacer {
+  flex: 1 1 0;
+  min-height: 8px;
+  max-height: 40px;
 }
 
 .influence {
@@ -79,6 +93,10 @@
   margin: 0 0 2px;
   line-height: 1.6;
   text-align: right;
+}
+
+.right .influenceGroup:last-child .influence:last-child {
+  margin-bottom: 0;
 }
 
 .influence a {
@@ -124,6 +142,12 @@
     margin-top: 32px;
   }
 
+  .influenceSpacer {
+    flex: 0 0 calc(0.78rem * 1.6); /* one influence line height, i.e. a line break */
+    min-height: 0;
+    max-height: none;
+  }
+
   .influence {
     text-align: left;
   }
@@ -160,6 +184,10 @@
   margin-bottom: 3px;
 }
 
+.eventList li:last-child {
+  margin-bottom: 0;
+}
+
 .eventDate {
   display: inline-block;
   width: 6em;
@@ -180,7 +208,7 @@
 
 .calendar {
   margin-top: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .calendarIntro {
@@ -199,4 +227,11 @@
 .eventArrow {
   vertical-align: -2px;
   margin-left: 3px;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid var(--muted-text);
+  opacity: 0.4;
+  margin: 32px 0;
 }
