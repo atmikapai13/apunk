@@ -213,12 +213,17 @@
 
   .bio p {
     font-size: 0.95rem;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 
   .projectItem a {
     font-size: 0.95rem;
-    line-height: 1.2;
+    line-height: 1.5;
+  }
+
+  /* intro paragraphs and calendar text (also the Contact page copy) */
+  .contactText {
+    line-height: 1.5;
   }
 }
 

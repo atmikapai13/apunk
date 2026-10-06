@@ -5,7 +5,7 @@ import atmika from '../assets/atmika-scary.png'
 export default function Contact() {
   return (
     <div>
-      <MobileHeader title="Contact" subtitle="coffee and chitchat" />
+      <MobileHeader page="contact" />
       <div className={styles.contactPhotoWrap}>
         <img src={atmika} alt="Atmika Pai" className={styles.contactPhoto} />
       </div>

@@ -252,4 +252,18 @@
   .categoryList {
     margin-top: -5px;
   }
+
+  /* looser line spacing for reading on a phone */
+  .categoryList li {
+    line-height: 1.5;
+    margin-bottom: 3px;
+  }
+
+  .categoryLink {
+    line-height: 1.5;
+  }
+
+  .annotation {
+    line-height: 1.4;
+  }
 }
