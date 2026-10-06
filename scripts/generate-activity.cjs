@@ -1,4 +1,4 @@
-const { execSync } = require('child_process')
+const { execSync, execFileSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
@@ -26,7 +26,25 @@ try {
 
 fs.writeFileSync(outPath, JSON.stringify(activity, null, 2))
 
-// Stamped at build time — npm run deploy always builds immediately before publishing,
-// so this reflects the actual deploy date rather than the last commit date.
-const today = new Date().toISOString().slice(0, 10)
-fs.writeFileSync(lastUpdatedPath, JSON.stringify({ date: today }, null, 2))
+// "Last updated" is the date of the latest commit that changed the site itself. Commits that only touch the
+// weekly events data (or the files this script generates) don't count, so the Instinct agent's weekly
+// events.json update leaves the date alone. Needs full git history, which the deploy workflow checks out.
+const CONTENT_PATHSPEC = [
+  'src/',
+  ':(exclude)src/data/events.json',
+  ':(exclude)src/data/activity.json',
+  ':(exclude)src/data/lastUpdated.json',
+]
+
+try {
+  const lastContentDate = execFileSync(
+    'git', ['log', '-1', '--format=%ad', '--date=short', '--', ...CONTENT_PATHSPEC],
+    { cwd: root }
+  ).toString().trim()
+  if (lastContentDate) {
+    fs.writeFileSync(lastUpdatedPath, JSON.stringify({ date: lastContentDate }, null, 2))
+    console.log(`Last updated: ${lastContentDate}`)
+  }
+} catch {
+  console.log('Could not read git history, keeping existing lastUpdated.json')
+}
