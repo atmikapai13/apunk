@@ -35,7 +35,7 @@ function saveOpen(id, open) {
   }
 }
 
-export default function Accordion({ id, title, teaser, defaultOpen = true, noTopLine = false, children }) {
+export default function Accordion({ id, title, teaser, defaultOpen = true, children }) {
   // Inside an AccordionGroup the group decides which one is open; on its own it keeps (and remembers) its own state
   const group = useContext(AccordionGroupContext)
   const [ownOpen, setOwnOpen] = useState(() => readOpen(id, defaultOpen))
@@ -71,7 +71,7 @@ export default function Accordion({ id, title, teaser, defaultOpen = true, noTop
   }
 
   return (
-    <div ref={sectionRef} className={`${styles.section} ${noTopLine ? styles.noTopLine : ''}`}>
+    <div ref={sectionRef} className={styles.section}>
       <p className={styles.heading}>
         <button type="button" className={styles.toggle} aria-expanded={open} onClick={toggle}>
           <span ref={labelRef} className={styles.label}>{title}</span>

@@ -45,7 +45,7 @@ export default function EventsCalendar() {
 
   return (
       <div className={`${styles.contactText} ${styles.calendar}`}>
-        <Accordion id="calendar" teaser={teaser} title={`My calendar for ${now.toLocaleString('en-US', { month: 'long' })}`} noTopLine>
+        <Accordion id="calendar" teaser={teaser} title={`My calendar for ${now.toLocaleString('en-US', { month: 'long' })}`}>
         <p className={styles.calendarIntro}>
           I'm experimenting with something new here, availed by consumer agents and coding on the fly. Each week, my <a href="https://instinct.com/" target="_blank" rel="noreferrer">Instinct agent</a> pulls events from my calendar, I review its picks, and it deploys them to my website. For this, it has access to both my Google Calendar and GitHub. 
         </p>

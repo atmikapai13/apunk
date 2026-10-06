@@ -70,7 +70,7 @@ export default function Home() {
             <EventsCalendar />
 
             <div id="projects">
-              <Accordion id="recent-works" title="Recent works" noTopLine>
+              <Accordion id="recent-works" title="Recent works">
                 <OngoingList items={ONGOINGS} />
               </Accordion>
             </div>

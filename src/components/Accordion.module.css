@@ -1,8 +1,8 @@
 .section {
   padding: 4px 0;
+  /* A line above each section (so the last section has none below it). */
   border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  /* The line is at full strength under the heading, then fades to nothing. Accordion.jsx sets --fade-start and
+  /* The line is at full strength over the heading, then fades to nothing. Accordion.jsx sets --fade-start and
      --fade-length from the heading's own width; the length below only applies until it has measured. */
   --fade-length: 220px;
   border-image: linear-gradient(
@@ -10,10 +10,6 @@
     rgba(128, 128, 128, 0.4) var(--fade-start, 0px),
     rgba(128, 128, 128, 0) calc(var(--fade-start, 0px) + var(--fade-length))
   ) 1;
-}
-
-.noTopLine {
-  border-top: 0;
 }
 
 .heading {
