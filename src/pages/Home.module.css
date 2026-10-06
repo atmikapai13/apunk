@@ -9,14 +9,45 @@
   max-width: 500px;
 }
 
+/* Pinned to the top of the viewport with a full-width background, so the text scrolls underneath it.
+   The negative margin and matching padding extend the band over the page's 25px top padding. */
 .photoWrap {
-  position: relative;
-  width: 60%;
-  margin-bottom: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-top: -25px;
+  padding-top: 25px;
+  background: var(--bg);
+}
+
+/* Soft fade under the band so text dims out gradually instead of being cut off. It is taller than the gap above
+   the intro text, so it only shows once the page has scrolled and the band is pinned. */
+.photoWrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -25px;
+  height: 25px;
+  background: linear-gradient(
+    to bottom,
+    rgba(248, 251, 253, 1) 0%,
+    rgba(248, 251, 253, 0.85) 20%,
+    rgba(248, 251, 253, 0.55) 45%,
+    rgba(248, 251, 253, 0.25) 70%,
+    rgba(248, 251, 253, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+
+.scrolled::after {
+  opacity: 1;
 }
 
 .photo {
-  width: 70%;
+  width: 42%;
   display: block;
   border-radius: 2px;
 }
@@ -32,6 +63,11 @@
   margin: 0 0 14px;
 }
 
+
+/* Slightly heavier than the paragraphs below; `.bio p` sets its own styles, hence the extra specificity */
+.bio p.welcome {
+  font-weight: 500;
+}
 
 .sectionLabel {
   font-size: 0.95rem;
@@ -69,7 +105,8 @@
 
 
 .right {
-  align-self: stretch;
+  align-self: start;
+  height: 810px; /* fixed (page top 25px + 810px = 835px bottom) so the weekly events never change it */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,7 +168,16 @@
   }
 
   .photoWrap {
+    position: relative; /* not sticky on small screens, the photo would take up the whole view */
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 14px;
+    background: none;
     width: 100%;
+  }
+
+  .photoWrap::after {
+    display: none;
   }
 
   .photo {
@@ -139,6 +185,7 @@
   }
 
   .right {
+    height: auto;
     margin-top: 32px;
   }
 
@@ -207,7 +254,7 @@
 }
 
 .calendar {
-  margin-top: 32px;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -221,6 +268,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.03em;
+  line-height: 1.25;
   margin: 0 0 4px;
 }
 
@@ -229,9 +277,7 @@
   margin-left: 3px;
 }
 
-.separator {
-  border: 0;
-  border-top: 1px solid var(--muted-text);
-  opacity: 0.4;
-  margin: 32px 0;
+
+.recentWorks {
+  margin-top: 28px;
 }

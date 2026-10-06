@@ -1,7 +1,8 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import styles from './Home.module.css'
 import atmika from '../assets/atmika.png'
+import Accordion from '../components/Accordion'
 import EventsCalendar from '../components/EventsCalendar'
 import INFLUENCES from '../data/sidebar-influences.json'
 
@@ -33,15 +34,24 @@ function AnimatedName() { ... }
 */
 
 export default function Home() {
+  // Once the page has scrolled the photo band is pinned, and the fade under it can show
+  const [scrolled, setScrolled] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 0)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
     <div className={styles.topRow}>
       <main className={styles.center}>
-        <div className={styles.photoWrap}>
+        <div className={`${styles.photoWrap} ${scrolled ? styles.scrolled : ''}`}>
           <img src={atmika} alt="Atmika Pai" className={styles.photo} />
         </div>
 
         <div className={styles.bio}>
-          <p>
+          <p className={styles.welcome}>
             Welcome to Atmika Pai's website!
           </p>
           <p>By way of introduction, I earned my bachelor's degree in data science and economics from <a href="" target="_blank" rel="noreferrer">UC Berkeley</a> and master's degree in information science and urban technology from <a href="https://tech.cornell.edu/programs/masters-programs/jacobs-technion-cornell-dual-ms-urban-tech/" target="_blank" rel="noreferrer">Cornell Tech</a> in New York City (where I live now).</p>
@@ -53,12 +63,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div id="projects">
-          <p className={styles.sectionLabel}>Recent works:</p>
-          <OngoingList items={ONGOINGS} />
+        <div id="projects" className={styles.recentWorks}>
+          <Accordion title="Recent works" headingClassName={styles.contactHeading} defaultOpen={false} noTopLine>
+            <OngoingList items={ONGOINGS} />
+          </Accordion>
         </div>
-
-        <hr className={styles.separator} />
 
         <EventsCalendar />
       </main>

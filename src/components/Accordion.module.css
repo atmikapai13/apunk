@@ -1,0 +1,45 @@
+.section {
+  padding: 4px 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  /* lines stay at full strength under the heading (--fade-start is its width), then fade out towards the right */
+  border-image: linear-gradient(to right, rgba(128, 128, 128, 0.4) var(--fade-start, 0px), rgba(128, 128, 128, 0)) 1;
+}
+
+.noTopLine {
+  border-top: 0;
+}
+
+.section > p {
+  margin: 0;
+  font-size: var(--font-size-body); /* same size as the body text */
+}
+
+.body {
+  margin-top: 6px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  text-align: left;
+  color: var(--muted-text);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.toggle:hover {
+  color: var(--text);
+}
+
+.icon {
+  flex-shrink: 0;
+}
