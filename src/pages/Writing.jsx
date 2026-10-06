@@ -40,9 +40,9 @@ function renderTitle(title) {
 }
 
 const CATEGORY_TREE = [
-  { label: 'Economics', children: [{ label: '', category: 'Econometrics' }, { label: 'Mapping the Bay', category: 'Mapping the Bay', italicPrefix: 'Series' }, { label: 'White Papers', category: 'Econometrics White Papers', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
+  { label: 'Economics', children: [{ label: '', category: 'Econometrics' }, { label: 'Mapping the Bay', category: 'Mapping the Bay', italicPrefix: 'Series' }, { label: 'White Papers', category: 'Econometrics White Papers', singleLine: true, headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
   { label: 'Spatial', children: [{ label: '', category: 'Cartography' }, { label: 'The New York Trilogy', category: 'The New York Trilogy', italicPrefix: 'Series' }, { label: 'Conferences', category: 'Cartography Conferences' }, { label: 'White Papers', category: 'Cartography White Papers', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }, { label: 'Mentions', category: 'Cartography Mentions', headingClassName: 'whitePapersHeading', sectionClassName: 'whitePapersSection' }] },
-  { label: 'Arts & Culture', children: [{ label: '', category: 'Arts & Culture' }, { label: 'Literature', category: 'Literature' }, { label: 'Philosophy', category: 'Philosophy' }, { label: 'Film', category: 'Film' }] },
+  { label: 'Arts & Culture', children: [{ label: '', category: 'Arts & Culture' }, { label: 'Philosophy', category: 'Philosophy' }, { label: 'Film', category: 'Film' }, { label: 'Literature', category: 'Literature' }] },
   { label: 'Mentions', children: [{ label: '', category: 'Mentions' }, { label: 'Keeping It Urban Summit (2026)', category: 'Keeping It Urban Summit' }] },
 ]
 
@@ -69,7 +69,7 @@ function CategoryNode({ node, depth }) {
   const isWhitePapers = node.sectionClassName === 'whitePapersSection'
 
   return (
-    <section className={`${depth === 0 ? styles.category : styles.subcategory} ${node.sectionClassName ? styles[node.sectionClassName] : ''}`}>
+    <section className={`${depth === 0 ? styles.category : styles.subcategory} ${node.sectionClassName ? styles[node.sectionClassName] : ''} ${node.singleLine ? styles.singleLine : ''}`}>
       {(node.label || node.italicPrefix) && (
         <p className={`${depth === 0 ? styles.categoryHeading : styles.subcategoryHeading} ${node.headingClassName ? styles[node.headingClassName] : ''}`}>
           {node.italicPrefix && <em>{node.italicPrefix}: </em>}

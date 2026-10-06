@@ -70,6 +70,14 @@
   margin-bottom: 0;
 }
 
+.whitePapersSection.singleLine .categoryList {
+  max-width: 100%;
+}
+
+.whitePapersSection.singleLine .categoryList li {
+  white-space: nowrap;
+}
+
 .categoryLink {
   font-size: var(--font-size-body);
   color: var(--text);
@@ -219,6 +227,10 @@
   .whitePapersSection .categoryList {
     max-width: 100%;
     margin-left: 0;
+  }
+
+  .whitePapersSection.singleLine .categoryList li {
+    white-space: normal;
   }
 
   .annotation {
