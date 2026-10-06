@@ -50,7 +50,7 @@ export default function EventsCalendar() {
           I'm experimenting with something new here, availed by consumer agents and coding on the fly. Each week, my <a href="https://instinct.com/" target="_blank" rel="noreferrer">Instinct agent</a> pulls events from my calendar, I review its picks, and it deploys them to my website. For this, it has access to both my Google Calendar and GitHub. 
         </p>
         <p className={styles.calendarIntro}>
-          Long story short, here's what I will be up to in {now.toLocaleString('en-US', { month: 'long' })}, so feel free to join me:
+          Long story short, here's what I will be up to in {now.toLocaleString('en-US', { month: 'long' })}, so feel free to tag along:
         </p>
         <ul className={styles.eventList}>
           {monthEvents.map(e => (
