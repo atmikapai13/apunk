@@ -183,10 +183,8 @@
   margin-bottom: 32px;
 }
 
-.calendarNote {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--muted-text);
+.calendarIntro {
+  margin: 0 0 12px;
 }
 
 .contactHeading {
@@ -196,10 +194,6 @@
   text-transform: uppercase;
   letter-spacing: -0.03em;
   margin: 0 0 4px;
-}
-
-.calendarFooter {
-  margin: 10px 0 0;
 }
 
 .eventArrow {

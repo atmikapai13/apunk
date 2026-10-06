@@ -41,7 +41,11 @@ export default function Contact() {
         </p>
       <div className={`${styles.contactText} ${styles.calendar}`}>
         <p className={styles.contactHeading}>My calendar for {now.toLocaleString('en-US', { month: 'long' })}</p>
-        <span className={styles.calendarNote}>(Updated by my Instinct agent weekly)</span>
+        <p className={styles.calendarIntro}>
+          I'm experimenting with something new here, availed by consumer agents and coding on the fly. My <a href="https://instinct.com/" target="_blank" rel="noreferrer">Instinct agent</a> updates
+          these events every week by pulling from my calendar, which it has access to, and I supervise its
+          picks. All of that is to say, come join me at any of these events.
+        </p>
         <ul className={styles.eventList}>
           {monthEvents.map(e => (
             <li key={e.title + e.start}>
@@ -58,7 +62,6 @@ export default function Contact() {
             </li>
           ))}
         </ul>
-        <p className={styles.calendarFooter}>Feel free to join me at any of these events.</p>
       </div>
       <p className={styles.contactHeading}>Socials</p>
       <p className={styles.contactText}>
