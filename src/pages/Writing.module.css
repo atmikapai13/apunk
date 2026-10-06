@@ -97,13 +97,12 @@
 
 .annotationLink:hover {
   color: var(--link);
-  
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .categoryLink:hover {
   color: var(--link);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .categoryLinkVisited {
