@@ -1,0 +1,102 @@
+.center {
+  max-width: var(--content-width-wide);
+  min-height: 100vh;
+}
+
+.intro p {
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  max-width: var(--content-width);
+  margin: 0 0 12px;
+}
+
+/* The intro sits in a StickyBand, which pins it to the top of the window; this adds the gap below it */
+.intro {
+  padding-bottom: 16px;
+}
+
+.year {
+  margin-bottom: 40px;
+}
+
+.yearHeading {
+  composes: headingSection from '../styles/typography.module.css';
+  text-align: right;
+}
+
+.group {
+  margin-top: 5px;
+}
+
+.groupHeading {
+  composes: headingSub from '../styles/typography.module.css';
+}
+
+.list {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.entry {
+  display: flex;
+  gap: 12px;
+  font-size: var(--text-reading);
+  line-height: var(--leading-tight);
+  margin-bottom: 3px;
+}
+
+.date {
+  flex: 0 0 3.6em;
+  color: var(--muted-text);
+  white-space: nowrap;
+}
+
+.body {
+  min-width: 0;
+}
+
+/* Reads like the rest of the list; hovering shows it's a link (same hover as every other link on the site) */
+.link {
+  color: inherit;
+}
+
+.link:hover {
+  color: var(--link);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.byline {
+  display: block;
+  color: var(--muted-text);
+}
+
+.meta {
+  color: var(--muted-text);
+}
+
+@media (max-width: 900px) {
+  .yearHeading {
+    font-size: var(--text-lg);
+    margin-bottom: 12px;
+  }
+
+  /* Same hierarchy as the Writing page: two classes beat the composed typography class (headingSub is 1.8rem) */
+  .group .groupHeading {
+    font-size: calc(var(--text-reading) + 2px);
+    margin: 24px 0 8px;
+  }
+
+  .intro {
+    padding-bottom: 12px;
+  }
+
+  .intro p {
+    line-height: var(--leading-loose);
+  }
+
+  .entry {
+    margin-bottom: 10px;
+  }
+}

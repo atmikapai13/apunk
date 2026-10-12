@@ -4,6 +4,7 @@ import styles from './MobileHeader.module.css'
 const HEADERS = {
   writing: { title: 'Writing', subtitle: 'Essays, white papers, and musings' },
   portfolio: { title: 'Portfolio', subtitle: 'Spatial and creative software' },
+  media: { title: 'Media', subtitle: 'Books and films, by the year' },
   contact: { title: 'Contact', subtitle: 'Coffee and chitchat' },
 }
 

@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import ProjectsGrid from './pages/Projects/ProjectsGrid'
 import ProjectsCarousel from './pages/Projects/ProjectsCarousel'
 import Writing from './pages/Writing'
+import Media from './pages/Media'
 import Contact from './pages/Contact'
 import Cursor from './components/Cursor'
 import Layout from './components/Layout'
@@ -18,7 +19,8 @@ function App() {
           <Route path="/projects-carousel" element={<ProjectsCarousel />} />
           <Route path="/writing" element={<Writing />} />
           <Route path="/writing/:slug" element={<Writing />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/media" element={<Media />} />
+        <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

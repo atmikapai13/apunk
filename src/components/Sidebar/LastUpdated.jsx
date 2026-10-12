@@ -13,7 +13,7 @@ function formatDate(isoDate) {
 export default function LastUpdated() {
   const { me, agent } = lastUpdated
   const clauses = me && agent && me === agent
-    ? [`${formatDate(me)} by me and my agent`]
+    ? [`${formatDate(me)} by my agent and I`]
     : [me && `${formatDate(me)} by me`, agent && `${formatDate(agent)} by my agent`].filter(Boolean)
 
   return (

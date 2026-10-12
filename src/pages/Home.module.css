@@ -9,47 +9,26 @@
   max-width: var(--content-width);
 }
 
-/* Pinned to the top of the viewport with a full-width background, so the text scrolls underneath it.
-   The negative margin and matching padding extend the band over the page's 25px top padding. */
-.photoWrap {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  margin-top: -25px;
-  padding-top: 25px;
-  background: var(--bg);
-}
-
-/* Soft fade under the band so text dims out gradually instead of being cut off. It is taller than the gap above
-   the intro text, so it only shows once the page has scrolled and the band is pinned. */
-.photoWrap::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -25px;
-  height: 25px;
-  background: linear-gradient(
-    to bottom,
-    rgba(248, 251, 253, 1) 0%,
-    rgba(248, 251, 253, 0.85) 20%,
-    rgba(248, 251, 253, 0.55) 45%,
-    rgba(248, 251, 253, 0.25) 70%,
-    rgba(248, 251, 253, 0) 100%
-  );
-  opacity: 0;
-  transition: opacity 0.25s;
-  pointer-events: none;
-}
-
-.scrolled::after {
-  opacity: 1;
+.portrait {
+  position: relative;
+  width: 45%;
 }
 
 .photo {
-  width: 45%;
+  width: 100%;
   display: block;
   border-radius: 2px;
+}
+
+/* Over the pupil of the right eye: centre at 68% / 47% of the image, about a tenth of its width across */
+.eye {
+  position: absolute;
+  left: 68%;
+  top: 47%;
+  width: 10%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 .bio {
@@ -150,21 +129,13 @@
     max-width: none;
   }
 
-  .photoWrap {
-    position: relative; /* not sticky on small screens, the photo would take up the whole view */
-    margin-top: 0;
-    padding: 0;
-    margin-bottom: 0; /* the gap to the welcome line is .bio's 6px top margin */
-    background: none;
-    width: 100%;
-  }
-
-  .photoWrap::after {
-    display: none;
-  }
-
-  .photo {
+  .portrait {
     width: 70%;
+  }
+
+  /* the eye link is desktop only */
+  .eye {
+    display: none;
   }
 
   .right {

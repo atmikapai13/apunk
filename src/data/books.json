@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Anna Karenina",
+    "library": "NYPL",
+    "date": "2026-09-18"
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "library": "NYPL",
+    "date": "2026-08-11"
+  },
+  {
+    "title": "A return to love : reflections on the principles of a Course in miracles",
+    "author": "Williamson, Marianne",
+    "library": "NYPL",
+    "date": "2026-08-05"
+  },
+  {
+    "title": "Laughter in the dark",
+    "author": "Nabokov, Vladimir Vladimirovich",
+    "library": "NYPL",
+    "date": "2026-07-18"
+  },
+  {
+    "title": "Spring torrents",
+    "author": "Turgenev, Ivan Sergeevich",
+    "library": "NYPL",
+    "date": "2026-07-18"
+  },
+  {
+    "title": "Being digital",
+    "author": "Negroponte, Nicholas",
+    "library": "NYPL",
+    "date": "2026-06-02"
+  },
+  {
+    "title": "Fodor's essential New Zealand",
+    "author": "Freeman, Stu",
+    "library": "NYPL",
+    "date": "2024-12-23"
+  },
+  {
+    "title": "Madame Bovary",
+    "author": "Flaubert, Gustave",
+    "library": "NYPL",
+    "date": "2024-12-12"
+  },
+  {
+    "title": "The fountainhead",
+    "author": "Rand, Ayn",
+    "library": "NYPL",
+    "date": "2024-10-29"
+  }
+]

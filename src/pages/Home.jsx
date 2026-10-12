@@ -1,7 +1,9 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import styles from './Home.module.css'
 import atmika from '../assets/atmika.png'
+import StickyBand from '../components/StickyBand'
 import Accordion from '../components/Accordion'
 import AccordionGroup from '../components/AccordionGroup'
 import EventsCalendar from '../components/EventsCalendar'
@@ -35,21 +37,16 @@ function AnimatedName() { ... }
 */
 
 export default function Home() {
-  // Once the page has scrolled the photo band is pinned, and the fade under it can show
-  const [scrolled, setScrolled] = useState(false)
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 0)
-    onScroll()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
   return (
     <div className={styles.topRow}>
       <main className={styles.center}>
-        <div className={`${styles.photoWrap} ${scrolled ? styles.scrolled : ''}`}>
-          <img src={atmika} alt="Atmika Pai" className={styles.photo} />
-        </div>
+        <StickyBand>
+          <div className={styles.portrait}>
+            <img src={atmika} alt="Atmika Pai" className={styles.photo} />
+            {/* a hidden link over the pupil of the right eye (desktop only) */}
+            <Link to="/media" className={styles.eye} aria-label="What inspires me" />
+          </div>
+        </StickyBand>
 
         <div className={styles.bio}>
           <p className={styles.welcome}>

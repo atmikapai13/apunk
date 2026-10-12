@@ -113,6 +113,9 @@ function WritingIndex() {
     <div className={styles.center}>
       <MobileHeader page="writing" />
       {CATEGORY_TREE.map(node => <CategoryNode key={node.label} node={node} depth={0} />)}
+      <p className={styles.inspired}>
+        Here's what's <Link to="/media">inspired me</Link> this year.
+      </p>
     </div>
   )
 }
