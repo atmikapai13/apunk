@@ -1,4 +1,4 @@
-import styles from './Home.module.css'
+import styles from './Contact.module.css'
 import MobileHeader from '../components/MobileHeader'
 import atmika from '../assets/atmika-scary.png'
 

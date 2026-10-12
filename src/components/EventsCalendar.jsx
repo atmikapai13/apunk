@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react'
 import Accordion from './Accordion'
 import events from '../data/events.json'
-import styles from '../pages/Home.module.css'
+import styles from './EventsCalendar.module.css'
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
@@ -44,7 +44,7 @@ export default function EventsCalendar() {
   const teaser = nextEventTeaser(monthEvents, now)
 
   return (
-      <div className={`${styles.contactText} ${styles.calendar}`}>
+      <div className={styles.calendar}>
         <Accordion id="calendar" teaser={teaser} title={`My calendar for ${now.toLocaleString('en-US', { month: 'long' })}`}>
         <p className={styles.calendarIntro}>
           I'm experimenting with something new here, availed by consumer agents and coding on the fly. Each week, my <a href="https://instinct.com/" target="_blank" rel="noreferrer">Instinct agent</a> pulls events from my calendar, I review its picks, and it deploys them to my website. For this, it has access to both my Google Calendar and GitHub. 

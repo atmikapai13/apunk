@@ -140,17 +140,6 @@
   font-style: italic;
 }
 
-.contactText {
-  font-size: var(--text-body);
-  max-width: var(--content-width);
-  line-height: var(--leading-normal);
-  margin: 0 0 10px 0;
-}
-
-.contactPhotoWrap {
-  display: none;
-}
-
 @media (max-width: 900px) {
   .topRow {
     grid-template-columns: 1fr;
@@ -193,18 +182,6 @@
     text-align: left;
   }
 
-  .contactPhotoWrap {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .contactPhoto {
-    width: 60%;
-    display: block;
-    border-radius: 2px;
-  }
-
   .bio p {
     font-size: var(--text-body);
     line-height: var(--leading-loose);
@@ -214,59 +191,7 @@
     font-size: var(--text-body);
     line-height: var(--leading-loose);
   }
-
-  /* intro paragraphs and calendar text (also the Contact page copy) */
-  .contactText {
-    line-height: var(--leading-loose);
-  }
 }
-
-/* the 6px bottom mirrors the accordion body's 6px top, so the open calendar sits evenly above the next heading */
-.eventList {
-  margin: 6px 0 6px;
-  padding-left: 20px;
-}
-
-.eventList li {
-  margin-bottom: 3px;
-}
-
-.eventList li:last-child {
-  margin-bottom: 0;
-}
-
-.eventDate {
-  display: inline-block;
-  width: 6em;
-  white-space: nowrap;
-  vertical-align: top;
-}
-
-.eventBody {
-  display: inline-block;
-  vertical-align: top;
-  max-width: calc(100% - 6em);
-}
-
-.eventNote {
-  display: block;
-  color: var(--text);
-}
-
-.calendar {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.calendarIntro {
-  margin: 0 0 12px;
-}
-
-.eventArrow {
-  vertical-align: -2px;
-  margin-left: 3px;
-}
-
 
 /* the collapsible sections under the intro: My calendar, then Recent works */
 .accordions {

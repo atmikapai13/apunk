@@ -1,0 +1,28 @@
+.contactText {
+  font-size: var(--text-body);
+  max-width: var(--content-width);
+  line-height: var(--leading-normal);
+  margin: 0 0 10px 0;
+}
+
+.contactPhotoWrap {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .contactPhotoWrap {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contactPhoto {
+    width: 60%;
+    display: block;
+    border-radius: 2px;
+  }
+
+  .contactText {
+    line-height: var(--leading-loose);
+  }
+}

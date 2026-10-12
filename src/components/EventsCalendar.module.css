@@ -1,0 +1,54 @@
+/* The collapsible "My calendar" section on Home */
+.calendar {
+  font-size: var(--text-body);
+  max-width: var(--content-width);
+  line-height: var(--leading-normal);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .calendar {
+    line-height: var(--leading-loose);
+  }
+}
+
+/* the 6px bottom mirrors the accordion body's 6px top, so the open calendar sits evenly above the next heading */
+.eventList {
+  margin: 6px 0 6px;
+  padding-left: 20px;
+}
+
+.eventList li {
+  margin-bottom: 3px;
+}
+
+.eventList li:last-child {
+  margin-bottom: 0;
+}
+
+.eventDate {
+  display: inline-block;
+  width: 6em;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.eventBody {
+  display: inline-block;
+  vertical-align: top;
+  max-width: calc(100% - 6em);
+}
+
+.eventNote {
+  display: block;
+  color: var(--text);
+}
+
+.calendarIntro {
+  margin: 0 0 12px;
+}
+
+.eventArrow {
+  vertical-align: -2px;
+  margin-left: 3px;
+}
