@@ -47,13 +47,13 @@
 }
 
 .photo {
-  width: 42%;
+  width: 45%;
   display: block;
   border-radius: 2px;
 }
 
 .bio {
-  margin-top: 16px;
+  margin-top: 6px;
 }
 
 .bio p {
@@ -165,7 +165,7 @@
     position: relative; /* not sticky on small screens, the photo would take up the whole view */
     margin-top: 0;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 0; /* the gap to the welcome line is .bio's 6px top margin */
     background: none;
     width: 100%;
   }
@@ -175,7 +175,7 @@
   }
 
   .photo {
-    width: 60%;
+    width: 70%;
   }
 
   .right {
@@ -221,8 +221,9 @@
   }
 }
 
+/* the 6px bottom mirrors the accordion body's 6px top, so the open calendar sits evenly above the next heading */
 .eventList {
-  margin: 6px 0 0;
+  margin: 6px 0 6px;
   padding-left: 20px;
 }
 

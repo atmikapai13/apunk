@@ -9,9 +9,10 @@
 }
 
 .clock {
-  font-family: var(--mono);
-  font-size: 11px;
+  font-family: Garamond, 'Times New Roman', serif;
+  font-size: 14px;
   font-weight: 400;
+  font-style: italic;
   line-height: var(--leading-tight);
   color: var(--muted-text);
   margin: 6px 0 0; /* a little gap under the name */
@@ -93,6 +94,6 @@
   }
 
   .clock {
-    font-size: 15px;
+    font-size: 18px;
   }
 }

@@ -225,33 +225,63 @@
     display: inline;
   }
 
-  /* Section headings match the size of the "Writing" page header (MobileHeader title, 1.5rem);
-     sub-section headings such as the "Series" ones sit below that. */
+  /* Hierarchy on mobile, from loudest to quietest:
+     1. section headings ("Economics"): 1.5rem headline face
+     2. "Series: ..." / "Conferences" headings: 18px headline face, sentence case
+     3. "WHITE PAPERS" / "MENTIONS" labels: body size, bold uppercase
+     Every group heading gets the same gap above and below, and every entry list uses the same item spacing. */
   .categoryHeading {
     font-size: var(--text-lg);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
-  .subcategoryHeading {
-    font-size: 16px;
-    margin-top: 14px;
+  /* Two classes so this beats the composed typography classes (headingSub is 1.8rem) whatever order the
+     stylesheets load in. */
+  .subcategory .subcategoryHeading {
+    font-size: calc(var(--text-reading) + 2px);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  .subcategory .subcategoryHeading.whitePapersHeading {
+    font-size: var(--text-reading);
+  }
+
+  /* The first group directly under a section heading needs no extra gap above it */
+  .categoryHeading + .subcategory .subcategoryHeading,
+  .categoryHeading + .subcategory {
+    margin-top: 0;
   }
 
   .categoryList {
     margin-top: 0;
   }
 
-  /* Lines of one entry stay close together, with a clear gap between entries so wrapped titles read as one item */
-  .categoryList li {
+  /* One rhythm for every list (White Papers included, which has its own tighter rule on desktop):
+     lines of an entry stay close together, with a clear gap between entries so wrapped titles read as one item.
+     The last entry carries no gap, so the heading after it alone decides the space between groups. */
+  .categoryList li,
+  .whitePapersSection .categoryList li {
     line-height: var(--leading-tight);
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+  }
+
+  .categoryList li:last-child,
+  .whitePapersSection .categoryList li:last-child {
+    margin-bottom: 0;
+  }
+
+  .whitePapersSection .categoryList {
+    line-height: var(--leading-tight);
   }
 
   .categoryLink {
     line-height: var(--leading-tight);
   }
 
+  /* Notes such as "Selected in ..." hang tight under their entry, at the same line height as the entry */
   .annotation {
-    line-height: var(--leading-loose);
+    margin-top: 3px;
+    line-height: var(--leading-tight);
   }
 }

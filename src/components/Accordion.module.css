@@ -29,8 +29,10 @@
   transition: color 0.15s;
 }
 
-/* same hover as every other link on the site (see `a:hover` in index.css) */
-.toggle:hover {
+/* same hover as every other link on the site (see `a:hover` in index.css); the open section keeps it,
+   so it's clear which one you're in */
+.toggle:hover,
+.toggle[aria-expanded="true"] {
   color: var(--link);
   font-weight: 600;
   font-style: italic;
