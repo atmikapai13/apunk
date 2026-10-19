@@ -1,16 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
-import { useLocation } from 'react-router-dom'
 
 const MOBILE_QUERY = '(max-width: 900px)'
 const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
 
 // How fast the animation clock advances per frame, which sets how quickly the letters ripple.
-// Desktop is a smooth, slow wave; hovering speeds up the same wave (no jumps). Mobile keeps the original
-// lively pace with a flickering noise pattern. Edit these to change the pace.
-const MOBILE_STEP = 0.018
-const IDLE_STEP = MOBILE_STEP * 0.3     // desktop, not hovered
-const HOVER_STEP = MOBILE_STEP * 2.5    // desktop, hovered
-const DESKTOP_SEED = 7                  // fixed noise pattern for the smooth desktop waves
+const STEP = 0.018
 
 export default function WarpName() {
   const turbRef = useRef(null)
@@ -33,25 +27,20 @@ export default function WarpName() {
     }
   }, [])
 
-  // The name is in constant motion (blue and warping) on the landing page and on mobile.
-  // On the other pages it only moves while hovered. Visitors who ask their system to reduce motion get none.
-  const isHome = useLocation().pathname === '/'
-  const active = !reduceMotion && (isMobile || isHome || hovered)
-  const step = isMobile ? MOBILE_STEP : hovered ? HOVER_STEP : IDLE_STEP
+  // The name is static (black) until hovered, when it turns blue and warps. On mobile it is always moving.
+  // Visitors who ask their system to reduce motion get none.
+  const active = !reduceMotion && (isMobile || hovered)
 
   useEffect(() => {
     if (active) {
-      // Changing the seed makes the noise jump to a new shape. Mobile re-rolls it every frame for a lively
-      // flicker; desktop holds it fixed so only the smooth frequency waves below move the letters.
-      if (!isMobile && turbRef.current) turbRef.current.setAttribute('seed', DESKTOP_SEED)
       function animate() {
         if (turbRef.current) {
           const fx = 0.012 + Math.sin(tRef.current * 0.3) * 0.008
           const fy = 0.006 + Math.cos(tRef.current * 0.2) * 0.004
           turbRef.current.setAttribute('baseFrequency', `${fx} ${fy}`)
-          if (isMobile) turbRef.current.setAttribute('seed', (tRef.current * 3) % 200)
+          turbRef.current.setAttribute('seed', (tRef.current * 3) % 200)
         }
-        tRef.current += step
+        tRef.current += STEP
         rafRef.current = requestAnimationFrame(animate)
       }
       animate()
@@ -62,7 +51,7 @@ export default function WarpName() {
       }
     }
     return () => cancelAnimationFrame(rafRef.current)
-  }, [active, isMobile, step])
+  }, [active])
 
   const fontSize = isMobile ? 28 : 20
   const width = isMobile ? 231 : 165
