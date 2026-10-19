@@ -14,7 +14,10 @@
 
 @media (max-width: 900px) {
   .shell {
-    grid-template-columns: 1fr;
-    padding: 72px 24px 24px;
+    grid-template-columns: minmax(0, 1fr); /* plain 1fr lets long unwrapped text widen the column past the screen */
+    /* side gutters scale with the screen width (20px on small phones up to 40px on wide ones),
+       and never sit under a notch or rounded corner */
+    --gutter: clamp(20px, 6vw, 40px);
+    padding: 72px max(var(--gutter), env(safe-area-inset-right)) 24px max(var(--gutter), env(safe-area-inset-left));
   }
 }

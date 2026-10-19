@@ -121,7 +121,7 @@
 
 @media (max-width: 900px) {
   .topRow {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr); /* plain 1fr lets the unwrapped calendar teaser widen the column past the screen */
     gap: 0;
   }
 
@@ -167,4 +167,22 @@
 /* the collapsible sections under the intro: My calendar, then Recent works */
 .accordions {
   margin-top: 28px;
+}
+
+/* looks like a link (grey, blue bold italic on hover) but isn't one */
+.hoverText {
+  color: var(--muted-text);
+  cursor: none;
+}
+
+.hoverText:hover {
+  color: var(--link);
+  font-weight: 600;
+  font-style: italic;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .hoverText {
+    cursor: auto;
+  }
 }
