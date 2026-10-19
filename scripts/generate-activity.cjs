@@ -27,10 +27,10 @@ try {
 fs.writeFileSync(outPath, JSON.stringify(activity, null, 2))
 
 // "Last updated" is tracked separately for me and for my Instinct agent.
-// The agent only refreshes the weekly calendar, so a commit that changes nothing in src/ except
-// src/data/events.json counts as the agent's. Any other commit that changes site files counts as mine.
+// The agent only updates events, movies and books, so a commit that changes nothing in src/ except
+// those data files counts as the agent's. Any other commit that changes site files counts as mine.
 // Files this script generates are ignored. Needs full git history, which the deploy workflow checks out.
-const AGENT_FILES = new Set(['src/data/events.json'])
+const AGENT_FILES = new Set(['src/data/events.json', 'src/data/movies.json', 'src/data/books.json'])
 const GENERATED_FILES = new Set(['src/data/activity.json', 'src/data/lastUpdated.json'])
 
 try {
