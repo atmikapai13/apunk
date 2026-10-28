@@ -50,7 +50,7 @@ export default function Media() {
       <MobileHeader page="media" />
       <StickyBand className={styles.intro}>
         <p>
-          I'm experimenting with something new here, availed by consumer agents and coding on the fly. Wouldn't it be nice to have a personal database of one's own consumer habits: movies watched, books read, and articles pondered...
+          I'm experimenting with something new here, availed by consumer agents and coding on the fly.
         </p>
         <p>
           I've given my <a href="https://instinct.com/" target="_blank" rel="noreferrer">Instinct agent</a> access to my New York Public Library, Brooklyn Public Library, and AMC accounts, and every week it pulls my activity. I also share articles with it, and it keeps a running log.
