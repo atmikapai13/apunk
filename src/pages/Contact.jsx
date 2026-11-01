@@ -17,15 +17,18 @@ export default function Contact() {
         = <a href="mailto:atmikapai13@gmail.com">atmikapai13 [at] gmail [.] com</a>
         <br></br>
          = <a href="https://www.linkedin.com/in/atmikapai/" target="_blank" rel="noreferrer">LinkedIn</a>
-      <br></br>
+      
       <br></br>
         = <a href="https://x.com/ap131999" target="_blank" rel="noreferrer">Twitter</a>
       <br></br>
       
         = <a href="https://github.com/atmikapai13" target="_blank" rel="noreferrer">Github</a>
       <br></br>
-       
+       <br></br>
        = <a href="https://open.spotify.com/user/31dcr5jiqh7jasnjs6rulusj6oum" target="_blank" rel="noreferrer">Spotify</a>
+      <br></br>
+
+       = <a href="https://www.google.com/maps/contrib/118041312174586755892/reviews/@38.1141818,-114.9171383,4z/data=!3m1!4b1!4m3!8m2!3m1!1e1?entry=ttu&g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer">Google Maps (Local Guide Level 6)</a>
       <br></br>
       
       </p>
